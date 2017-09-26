@@ -1,0 +1,65 @@
+site_name: eZ Services Documentation
+repo_url: https://github.com/ezsystems/ezservices-documentation
+copyright: "Copyright 1999-2017 eZ Systems AS and others"
+site_favicon: img/favicon.ico
+pages:
+    - 'Documentation': 'index.md'
+    - eZ Personalization Solution:
+        - 'eZ Personalization Solution': 'personalization/ez_personalization_solution.md'
+        - 'About Personalization': 'personalization/about_personalization.md'
+        - 'Ten minute guide': 'personalization/ten_minute_guide.md'
+        - User guide:
+            - '1. Introduction': 'personalization/user_guide/introduction.md'
+            - '2. Use cases': 'personalization/user_guide/use_cases.md'
+            - '3. Dashboard': 'personalization/user_guide/dashboard.md'
+            - '4. Event Types': 'personalization/user_guide/event_types.md'
+            - '5. Content Types': 'personalization/user_guide/content_types.md'
+            - '6. Recommendation models': 'personalization/user_guide/recommendation_models.md'
+            - '7. Filters': 'personalization/user_guide/filters.md'
+            - '8. Scenarios': 'personalization/user_guide/scenarios.md'
+            - '9. Content import': 'personalization/user_guide/content_import.md'
+            - '10. User data import': 'personalization/user_guide/user_data_import.md'
+        - Developer guide:
+            - 'Tracking API': 'personalization/developer_guide/tracking_api.md'
+            - 'Importing historical user tracking data': 'personalization/developer_guide/importing_historical_user_tracking_data.md'
+            - 'Tracking with yct.js': 'personalization/developer_guide/tracking_with_yct.md'
+            - 'Recommendation API': 'personalization/developer_guide/recommendation_api.md'
+            - 'Legacy Recommendation API': 'personalization/developer_guide/legacy_recommendation_api.md'
+            - 'Content API': 'personalization/developer_guide/content_api.md'
+            - 'User API': 'personalization/developer_guide/user_api.md'
+        - Best practices:
+            - 'Tracking integration': 'personalization/best_practices/tracking_integration.md'
+            - 'Recommendation integration': 'personalization/best_practices/recommendation_integration.md'
+        - Bundles:
+            - 'eZ Recommendation Bundle': 'personalization/bundles/ez_recommendation_bundle.md'
+            - 'eZ Recommendation Widget': 'personalization/bundles/ez_recommendation_widget.md'
+    - E-Commerce Plugins:
+        - 'Magento2': 'ecommerce_plugins/magento2.md'
+        - 'OXID': 'ecommerce_plugins/oxid.md'
+    - 'Definitions': 'definitions.md'
+#theme: material
+#theme_dir: material
+#extra_css: [fonts/MavenPro.css, css/custom.css]
+#extra_javascript: [js/jquery.min.js, js/custom.js]
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite(guess_lang=false)
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc(permalink=true)
+  - pymdownx.arithmatex
+  - pymdownx.betterem(smart_enable=all)
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist(custom_checkbox=true)
+  - pymdownx.tilde
+
+#extra:
+#    font:
+#        text: 'Maven Pro'
