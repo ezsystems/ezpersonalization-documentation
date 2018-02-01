@@ -30,9 +30,7 @@ pages:
         - Best practices:
             - 'Tracking integration': 'personalization/best_practices/tracking_integration.md'
             - 'Recommendation integration': 'personalization/best_practices/recommendation_integration.md'
-        - Bundles:
-            - 'eZ Recommendation Bundle': 'personalization/bundles/ez_recommendation_bundle.md'
-            - 'eZ Recommendation Widget': 'personalization/bundles/ez_recommendation_widget.md'
+        - 'Bundles': 'personalization/bundles.md'
     - E-Commerce Plugins:
         - 'Magento2': 'ecommerce_plugins/magento2.md'
         - 'OXID': 'ecommerce_plugins/oxid.md'
