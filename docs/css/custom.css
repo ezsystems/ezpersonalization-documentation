@@ -70,15 +70,40 @@ body {
 }
 
 .md-typeset h2 {
-    font-size: 27px;
+    font-size: 34px;
     font-weight: 500;
     line-height: 1;
 }
 
 .md-typeset h3 {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 500;
     line-height: 1;
+}
+
+.md-typeset h4 {
+    font-size: 23px;
+}
+
+.md-typeset h5 {
+    font-size: 20px;
+    text-transform: none;
+}
+
+.md-typeset h6 {
+    font-size: 18px;
+}
+
+.md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+    color: #63605d;
+}
+
+.md-typeset h2, .md-typeset h3, .md-typeset h4 {
+    font-weight: 500;
+}
+
+.md-typeset h5, .md-typeset h6 {
+    font-weight: 600;
 }
 
 .md-footer-meta {
@@ -99,6 +124,170 @@ body {
     content: url('../images/eZ-Brandmark.png');
 }
 
+.admonition {
+    font-size: 16px;
+}
+
 .admonition.tip:before {
    content: "lightbulb_outline";
+}
+
+.admonition.enterprise:before {
+    content: "";
+}
+
+.admonition.enterprise {
+    border-left: 5px solid rgba(241, 90, 34, 0.59);
+    background-color: #ffffff;
+}
+
+.admonition.caution {
+    border-color: #f46485;
+    background-color: #fcd2dc;
+}
+
+.admonition.tip {
+    border-color: #6ed28a;
+    background-color: #d5f2dd;
+}
+
+.admonition.note {
+    border-color: #4ec7f3;
+    background-color: #c9eefb;
+}
+
+details {
+    position: relative;
+    margin: 1.5625em 0;
+    padding: .8rem 1.2rem;
+    border-left: 5px solid #4ec7f3;
+    border-radius: .2rem;
+    background-color: #c9eefb;
+}
+
+.md-typeset .codehilitetable .linenos {
+    background-color: #c0c0c0;
+    color: #fff;
+}
+
+.md-typeset .codehilite, .md-typeset .highlight pre {
+    background-color: #f8f8f8;
+}
+
+.md-typeset code {
+    background-color: #f0f0f0;
+    padding: 1px 4px;
+    margin: 0;
+    box-shadow: none;
+}
+
+.codehilite .hll {
+    background-color: #faecbc;
+}
+
+.md-nav__link[data-md-state=blur] {
+    color: rgba(0, 0, 0, 0.36);
+}
+
+div.rst-versions {
+    width: 250px;
+    border-top: 0;
+    background: #3a3b3c;
+    font-size: 10pt;
+}
+
+.rst-versions div.rst-other-versions {
+    background-color: rgba(0,0,0,.26) !important;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font-size: 13px;
+    font-style: italic;
+}
+
+a.external:after {
+    content: 'open_in_new';
+    font-family: Material Icons;
+    font-style: normal;
+    padding-left: 2px;
+    position: relative;
+    font-size: 11px;
+    top: -5px;
+}
+
+.md-typeset .md-content__icon {
+    padding: 0 3px;
+}
+
+.md-nav__link--active {
+    font-weight: 700;
+}
+
+.md-search-result__item {
+    list-style: none;
+}
+
+.md-search__loader {
+    padding: 1rem 1rem 1rem 4.8rem;
+    font-size: 15pt;
+    display: block;
+    color: rgba(0,0,0,.54);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#fff),to(hsla(0,0%,100%,0))),-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.26)),color-stop(35%,rgba(0,0,0,.07)),color-stop(60%,transparent));
+    background: linear-gradient(180deg,#fff 10%,hsla(0,0%,100%,0)),linear-gradient(180deg,rgba(0,0,0,.26),rgba(0,0,0,.07) 35%,transparent 60%);
+    background-attachment: local,scroll;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 100% 2rem,100% 1rem;
+    box-shadow: inset 0 .1rem 0 rgba(0,0,0,.07);
+}
+
+.md-search__loader:not(.md-search__loader--active) {
+    display: none;
+}
+
+.md-search__loader:before {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    content: "";
+    top: 3px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transform-origin: 46% 54%;
+    -webkit-transform-origin: 46% 54%;
+    -moz-transform-origin: 46% 54%;
+    -ms-transform-origin: 46% 54%;
+    -o-transform-origin: 46% 54%;
+    -webkit-animation: loader_spin 1s linear infinite;
+    -moz-animation: loader_spin 1s linear infinite;
+    animation: loader_spin 1s linear infinite;
+    background: url("../images/loading.svg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.md-search__loader--hide {
+    display: none;
+}
+
+@-moz-keyframes loader_spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes loader_spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes loader_spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }

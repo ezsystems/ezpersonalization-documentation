@@ -117,6 +117,7 @@
               {% block content %}
                 {% if config.edit_uri %}
                   <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-icon md-content__icon">edit</a>
+                  <a href="{{ page.edit_url|replace('/edit/', '/blob/') }}" title="{{ lang.t('show.link.title') }}" class="md-icon md-content__icon">description</a>
                 {% endif %}
                 {% if not "\x3ch1" in page.content %}
                   <h1>{{ page.title | default(config.site_name, true)}}</h1>
@@ -149,7 +150,7 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ base_url }}/assets/javascripts/application-6940329b9f.js"></script>
+      <script src="{{ base_url }}/assets/javascripts/application-14120aaec9.js"></script>
       {% set languages = lang.t("search.languages").split(",") %}
       {% if languages | length and languages[0] != "" %}
         {% set path = base_url + "/assets/javascripts/lunr" %}
