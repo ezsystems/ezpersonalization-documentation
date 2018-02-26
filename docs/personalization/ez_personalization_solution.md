@@ -14,7 +14,7 @@ This documentation is intended for Users, Developers and System Administrators. 
 
 ### For Developers and Admins
 
-**You want to set up eZ Personalization? Take a look at our [GitHub repo](https://github.com/ezsystems/EzSystemsRecommendationBundle)**
+**You want to set up eZ Personalization? Take a look at our [Recommendation in eZ Platform documentation](https://doc.ezplatform.com/en/latest/guide/recommendation/)**
 
 **Ready to start customizing or interested in API integration? See the [Developer Guide](developer_guide/tracking_api.md) and [Best Practices](best_practices/recommendation_integration.md).**
 
