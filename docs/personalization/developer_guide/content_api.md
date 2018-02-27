@@ -142,31 +142,6 @@ Different HTTP-methods can be used to create, update, delete or retrieve items l
 
 The body of a request to import data using the above interface must contain a valid XML document.
 
-#### Pull/Bulk Interface
-
-The bulk interface is mainly used to provide an initial data import to initialize the Recommender Engine. It also can or should be used to reset and re-initialize the data store.
-
-To enable the upload you must provide a download location that allows the Recommender system to retrieve an .xml document containing the item data. In order to get a large amount of data, the export should be separated into smaller valid .xml files not bigger than 20 MB each. Only the XML format is supported. The export file must be publicly accessible, e.g.
-
-`http://cms.customer.de/path-to-the-service/download-folder/<filename>.xml`
-
-To initiate the download or the upload, the customer can invoke the following trigger service where the `url` parameter value reflects the URL-encoded address where the export file(s) can be found. If more than one file is provided for download, this trigger service has to be invoked once for each file with the corresponding URL. 
-
-The following is an example of a GET request which triggers the upload of an export file:
-
-`https://import.yoochoose.net/api/[customerid]/item/upload?url=<url>`
-
-|Parameter name|Description|Values|
-|---|---|---|
-|`clientid`|This is a reference to the account of the customer. It will be provided by YOOCHOOSE.|String|
-|`url`|The URL from where the export file can be downloaded by YOOCHOOSE service components.|URL-encoded String|
-
-After invoking the trigger service, downloading the file and further processing is scheduled asynchronously. Therefore, the usual response code for this service call is 202 (Accepted). The download will take place within the next minutes.
-
-!!! note
-
-    Currently Authentication is not supported to fetch customer downloads. As a workaround you could add it in the URL value. A better solution is to use cryptic filenames and delete the download after a while.
-
 ## Transferring Item Identifiers
 
 ### Transfer items
