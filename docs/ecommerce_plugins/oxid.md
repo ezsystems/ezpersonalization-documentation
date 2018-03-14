@@ -33,9 +33,9 @@ The structure should look like this:
 
     ./modules/yoochoose/yoochoose/..
 
-The folder structure of having `yoochoose` inside another `yoochoose` folder is correct.
+Don't worry if you see a `yoochoose/yoochoose/` in the directory tree. This is correct.
 
-If you have a subfolder `Mediaopt` inside the modules directory, please remove it. It is an old version of the plugin.
+If you have a subfolder `Mediaopt` inside the `modules` directory, please remove it. It is an old version of the plugin.
 
 ## Activation
 
@@ -47,7 +47,7 @@ and click "Activate".
 
 ![](img/oxid_activate.png)
 
-Afterwards, refresh the browser window (F5). A new menu element `/Yoochoose` must appear under the menu Service.
+After that, refresh the browser window (or hit F5). A new menu element `/Yoochoose` must appear under the menu Service.
 
 ## Registration
 
@@ -59,11 +59,11 @@ Register an account 
 
 ![](img/oxid_register2.png)
 
-Assure that Oxid Connect is selected
+Ensure that Oxid Connect is selected
 
 ![](img/oxid_connect.png)
 
-After a successful registration process you will receive a customer ID and a license key  by mail. Add this information into the corresponding fields in the module configuration page `/Yoochoose/Config`
+After a successful registration process you will receive a customer ID and a license key by email. Add this information into the corresponding fields in the module configuration page `/Yoochoose/Config`
 
 ![](img/oxid_config.png)
 
