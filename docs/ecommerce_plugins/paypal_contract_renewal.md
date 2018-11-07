@@ -1,8 +1,8 @@
-# Renewing a PayPal contract
+# Renewing PayPal contract
 
 PayPal has a built-in security mechanism that expires a customer contract (subscription) after one year.
 
-After this happens, you need to adding payment information again to renew the contract.
+After this happens, you need to add payment information again to renew the contract.
 
 The steps are the same as during registration:
 
