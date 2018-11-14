@@ -34,6 +34,7 @@ pages:
     - E-Commerce Plugins:
         - 'Magento2': 'ecommerce_plugins/magento2.md'
         - 'OXID': 'ecommerce_plugins/oxid.md'
+        - 'Renewing PayPal contract': 'ecommerce_plugins/paypal_contract_renewal.md'
     - 'Definitions': 'definitions.md'
 #theme: material
 theme_dir: material
