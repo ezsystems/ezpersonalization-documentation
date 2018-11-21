@@ -1,7 +1,6 @@
 site_name: eZ Services Documentation
 repo_url: https://github.com/ezsystems/ezservices-documentation
-copyright: "Copyright 1999-2017 eZ Systems AS and others"
-site_favicon: img/favicon.ico
+copyright: "Copyright 1999-2018 eZ Systems AS and others"
 pages:
     - 'Documentation': 'index.md'
     - eZ Personalization Solution:
@@ -36,32 +35,68 @@ pages:
         - 'OXID': 'ecommerce_plugins/oxid.md'
         - 'Renewing PayPal contract': 'ecommerce_plugins/paypal_contract_renewal.md'
     - 'Definitions': 'definitions.md'
-#theme: material
+
+theme:
+  name: null
+  custom_dir: 'material'
+  favicon: 'img/favicon.ico'
+  language: 'en'
+  palette:
+      primary: 'blue grey'
+      accent: 'deep orange'
+
+  font: false
+  logo: 'images/eZ-Brandmark.png'
+  feature:
+      tabs: false
+  search_index_only: false
+
 theme_dir: material
-extra_css: [fonts/MavenPro.css, css/custom.css]
-extra_javascript: [js/jquery.min.js, js/custom.js]
+
+extra:
+  version_warning:
+    latest: ['master']
+    previous_lts: ['']
+    lts: ['']
+    ft: ['']
+    dev: ['']
+
+extra_css:
+  - fonts/MavenPro.css
+  - css/custom.css
+  - '//cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css'
+
+extra_javascript: [js/jquery.min.js, js/custom.js, '//cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js']
 markdown_extensions:
-  - markdown.extensions.admonition
-  - markdown.extensions.codehilite:
+  - admonition
+  - codehilite:
       guess_lang: false
       linenums: true
-  - markdown.extensions.def_list
-  - markdown.extensions.footnotes
-  - markdown.extensions.meta
-  - markdown.extensions.toc(permalink=true)
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
   - pymdownx.arithmatex
-  - pymdownx.betterem(smart_enable=all)
+  - pymdownx.betterem:
+      smart_enable: all
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      guess_lang: false
+      linenums: true
+      css_class: codehilite
+      extend_pygments_lang:
+        - name: php
+          lang: php
+          options:
+            startinline: true
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences
-  - pymdownx.tasklist(custom_checkbox=true)
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.tilde
   - pymdownx.details
-
-#extra:
-#    font:
-#        text: 'Maven Pro'
