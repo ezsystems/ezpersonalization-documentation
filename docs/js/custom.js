@@ -84,16 +84,16 @@ $(document).ready(function () {
         return this.hostname && this.hostname !== location.hostname;
     }).addClass("external");
 
-    docsearch({
-        apiKey: 'bfb5bd7cad971d31ef8be599174334f3',
-        indexName: 'ezplatform',
-        inputSelector: '#search_input',
-        algoliaOptions: {
-            'facetFilters': ["lang:en", "version:" + branchName],
-            'hitsPerPage': 10
-        },
-        debug: false
-    });
+    // docsearch({
+    //     apiKey: 'bfb5bd7cad971d31ef8be599174334f3',
+    //     indexName: 'ezplatform',
+    //     inputSelector: '#search_input',
+    //     algoliaOptions: {
+    //         'facetFilters': ["lang:en", "version:" + branchName],
+    //         'hitsPerPage': 10
+    //     },
+    //     debug: false
+    // });
 
     $(document).on("keypress", "#search_input", function(event) {
         if (event.keyCode == 13) {
