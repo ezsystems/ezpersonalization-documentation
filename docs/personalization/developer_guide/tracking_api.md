@@ -165,7 +165,7 @@ In addition to the fact that an item is bought, this event should provide inform
 
 |Name|Description|Values|
 |---|---|---|
-|quantity (required)|The number of products a user has bought. Default value is "1". It is possible to send n events instead of setting this parameter to n.|Integer (default is "1")|
+|quantity (optional)|The number of products a user has bought. Default value is "1". It is possible to send n events instead of setting this parameter to n.|Integer (default is "1")|
 |fullprice (required)|A price for a **single** product. It contains the price in decimal format plus the currency ISO 4217 code. If the price has a decimal part, the point must be used. There can be no space between price and currency.|For example "12.45EUR" or "456JPY"|
 |price (deprecated)|**This parameter is deprecated, use the "fullprice" instead!** The price for a single item in Euro cents, e.g. 2.25EUR is price=225, default currency "EUR" is assumed.|Integer|
 |currency (deprecated)|**This parameter is deprecated, use the "fullprice" instead!** The currency of a price. If left out the default currency "EUR" is assumed.|ISO 4217|
