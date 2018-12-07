@@ -49,7 +49,7 @@ body {
 }
 
 .md-header {
-    background-color: #3a3b3c;
+    background-color: #00825c;
     color: #fff;
 }
 
@@ -107,11 +107,11 @@ body {
 }
 
 .md-footer-meta {
-    background: #3a3a3a;
+    background: #006849;
 }
 
 .md-footer-nav {
-    background-color: #4c4c4c;
+    background-color: #00825c;
     color: #fff;
     margin-top: 50px;
 }
