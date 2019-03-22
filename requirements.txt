@@ -1,4 +1,4 @@
-mkdocs>=0.16, < 0.17
-Markdown>=2.6.11,<3.0
-pygments>=2.2
-pymdown-extensions>=4.10,<6.0
+mkdocs>=0.17.1
+Pygments>=2.2
+pymdown-extensions>=3.4
+mkdocs-material>=2.7.2
