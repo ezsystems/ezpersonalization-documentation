@@ -12,7 +12,7 @@ This page describes how to fetch recommendations from the Recommender System via
 
     **BASIC Authentication** for fetching recommendations is enabled for some configurations (for example for Gambio Plugin) by default. Use the customerid as username and the license key as password. The license key is displayed in the upper right in the Admin GUI ([https://admin.yoochoose.net](https://admin.yoochoose.net/)) after logging with your registration credentials.
 
-    If you plan to use [JSONP](http://en.wikipedia.org/wiki/JSONP), authentication must be disabled. If it is enabled in your solution (can be easily tested with a recommendation request in a browser), please contact the eZ Recommender support (<support@yoochoose.com>) for further information and disabling.
+    If you plan to use [JSONP](https://en.wikipedia.org/wiki/JSONP), authentication must be disabled. If it is enabled in your solution (can be easily tested with a recommendation request in a browser), please contact the eZ Recommender support (<support@yoochoose.com>) for further information and disabling.
 
 ## Getting recommendations
 
@@ -22,7 +22,7 @@ To allow the customer to retrieve different types of recommendations based on di
 
 A recommendation request looks like this:
 
-**`http://reco.yoochoose.net/\[solutionid\]/\[customerid\]/\[userid\]/\[scenarioid\].\[extension\]?parameter=value&\[attributename=attributevalue\]`**
+**`https://reco.yoochoose.net/\[solutionid\]/\[customerid\]/\[userid\]/\[scenarioid\].\[extension\]?parameter=value&\[attributename=attributevalue\]`**
 
 The embedded parameters `solutionid`, `clientid` and `userid` are the same as used for event tracking. Additional embedded parameters are described in the following table.
 
@@ -46,7 +46,7 @@ Using additional query string parameters one can customize the recommendation re
 
 An example of the recommendation request: 
 
-**`http://reco.yoochoose.net/ebl/0000/smith/productpage.json?contextitems=123&categorypath=%2FCamera%2FCompact&numrecs=8`**
+**`https://reco.yoochoose.net/ebl/0000/smith/productpage.json?contextitems=123&categorypath=%2FCamera%2FCompact&numrecs=8`**
 
 It fetches 8 recommendations for user Smith, who is watching the item 123 and the category *"/Camera/Compact"* from the scenario with the identifier productpage.
 
@@ -209,11 +209,11 @@ If the website is implemented in a language which supports multithreading or non
 
 #### Loading from JavaScript using JSONP
 
-It is not possible to request the recommendation controller server directly from the JavaScript (over AJAX library or directly over XMLHttpRequest) because of the cross-domain restriction in most browsers. One of the possible technique to work around this limitation is [JSONP](http://en.wikipedia.org/wiki/JSONP).
+It is not possible to request the recommendation controller server directly from the JavaScript (over AJAX library or directly over XMLHttpRequest) because of the cross-domain restriction in most browsers. One of the possible technique to work around this limitation is [JSONP](https://en.wikipedia.org/wiki/JSONP).
 
 #### Loading over proxy
 
-A better solution in comparison with JSONP is to provide the proxy on the server side, which will forward script requests to the Recommender system. It can be implemented as a very simple proxy using the [mod\_proxy module](http://httpd.apache.org/docs/2.2/mod/mod_proxy.html) of Apache Webserver. It just transfers the data and the JavaScript renders the response into HTML itself.
+A better solution in comparison with JSONP is to provide the proxy on the server side, which will forward script requests to the Recommender system. It can be implemented as a very simple proxy using the [mod\_proxy module](https://httpd.apache.org/docs/2.2/mod/mod_proxy.html) of Apache Webserver. It just transfers the data and the JavaScript renders the response into HTML itself.
 
 An alternative approach is creating the HTML code on the server side for every target page in a sense to simplify the script on the client side.
 

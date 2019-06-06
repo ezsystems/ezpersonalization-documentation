@@ -6,7 +6,7 @@
 
     **BASIC Authentication** for fetching recommendations is disabled by default. If enabled, use the customerid as username and the license key as password. The license key is displayed in the upper right corner in the Admin GUI ([https://admin.yoochoose.net](https://admin.yoochoose.net/)) after logging in with your registration credentials.
 
-    If you plan to use [JSONP](http://en.wikipedia.org/wiki/JSONP), authentication must be disabled. If it is enabled in your solution and you want to remove authentication for recommendation requests, please contact <support@yoochoose.com> for further information and disabling.
+    If you plan to use [JSONP](https://en.wikipedia.org/wiki/JSONP), authentication must be disabled. If it is enabled in your solution and you want to remove authentication for recommendation requests, please contact <support@yoochoose.com> for further information and disabling.
 
 Recommendations are retrieved from the Recommendation Engine via RESTful requests using the HTTP GET method. The result is at least a list of item IDs that can be used to call the underlying CMS or shop system in order to postload the necessary information for the rendering process.
 
@@ -18,7 +18,7 @@ To allow a customer to get recommendations based on predefined configurations, s
 
 A recommendation request looks like this:
 
-    GET http://reco.yoochoose.net/api/v2/[customerid]/[userid]/[scenarioid].[extension]?parameter=value&[attribute=attributekey]
+    GET https://reco.yoochoose.net/api/v2/[customerid]/[userid]/[scenarioid].[extension]?parameter=value&[attribute=attributekey]
 
 The embedded parameters `customerid` and `userid` are the same as used in the [Tracking API](tracking_api.md). Additional embedded parameters are described in the following table. 
 
@@ -31,7 +31,7 @@ The embedded parameters `customerid` and `userid` are the same as used in the [T
 
     XML is deprecated and will not be developed further on. It can only be used in the old api (without using `/v2/` in the recommendation URL)
 
-    `GET http://reco.yoochoose.net/api/[customerid]/[userid]/[scenarioid].xml?parameter=value&[attribute=attributekey]`
+    `GET https://reco.yoochoose.net/api/[customerid]/[userid]/[scenarioid].xml?parameter=value&[attribute=attributekey]`
 
 ## Basic Request Parameters
 
@@ -49,7 +49,7 @@ Using additional query string parameters you can customize the recommendation re
 
 An example of the recommendation request: 
 
- `GET http://reco.yoochoose.net/ebl/0000/john.doe/detailpage.json` `?contextitems=123&categorypath=%2FCamera%2FCompact&attribute=title&attribute=deeplink,description&numrecs=8`
+ `GET https://reco.yoochoose.net/ebl/0000/john.doe/detailpage.json` `?contextitems=123&categorypath=%2FCamera%2FCompact&attribute=title&attribute=deeplink,description&numrecs=8`
 
 It fetches 8 recommendations for user john.doe, who is watching item 123 and the category *"/Camera/Compact"* from the scenario with the identifier detailpage. The recommendation response should also include the attribute values of the attributes `title`, `deeplink` and `description `for rendering the recommendations.
 
@@ -230,8 +230,8 @@ In most cases you do not need to calculate the expiration time manually. The tab
 ## Further Reading
 
 - Best Practices: [Recommendation Integration](../best_practices/recommendation_integration.md)
-- [Representational state transfer - Wikipedia](http://en.wikipedia.org/wiki/Representational_state_transfer)
-- [Uniform Resource Identifier (URI): Generic Syntax](http://tools.ietf.org/html/rfc3986)
-- [Apache Module mod\_proxy](http://httpd.apache.org/docs/2.2/mod/mod_proxy.html)
+- [Representational state transfer - Wikipedia](https://en.wikipedia.org/wiki/Representational_state_transfer)
+- [Uniform Resource Identifier (URI): Generic Syntax](https://tools.ietf.org/html/rfc3986)
+- [Apache Module mod\_proxy](https://httpd.apache.org/docs/2.2/mod/mod_proxy.html)
 - [Hypertext Transfer Protocol - HTTP/1.1](https://tools.ietf.org/html/rfc2616)
 - Integration in ten minutes: [Ten Minute Guide](../ten_minute_guide.md)
