@@ -90,9 +90,9 @@ All the elements and attributes except the item **type** and the item **id**�
 
 The key attribute in the elements **attribute** and **content** must contain only letters, numbers and underscores.
 
-Price is formatted as the amount of "cents", for example 1234 for 12 Euros and 34 Cents. If the currency doesn't contain the cent part, the main currency is used, for example 12 for 12 Japanese Yen. See [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217#cite_note-ReferenceA-6) to check if the selected currency has a "cents" part.
+Price is formatted as the amount of "cents", for example 1234 for 12 Euros and 34 Cents. If the currency doesn't contain the cent part, the main currency is used, for example 12 for 12 Japanese Yen. See [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217#cite_note-ReferenceA-6) to check if the selected currency has a "cents" part.
 
-Validity Dates are formatted as specified in [XSD format](http://www.w3.org/TR/xmlschema-2/#dateTime) *without a time zone*. Time zone is the default timezone of the mandator which is used.
+Validity Dates are formatted as specified in [XSD format](https://www.w3.org/TR/xmlschema-2/#dateTime) *without a time zone*. Time zone is the default timezone of the mandator which is used.
 
 #### Attributes
 

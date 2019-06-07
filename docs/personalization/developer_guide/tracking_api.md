@@ -97,7 +97,7 @@ The "categorypath" parameter plays an important role as it offers the possibilit
 
 !!! note
 
-    Events are forwarded to the Recommendation System engine using "http" or "https" requests, so-called [RESTful-Requests](http://en.wikipedia.org/wiki/Representational_state_transfer). Both GET and POST methods are allowed for the event tracking. Make sure that all embedded and query string parameters are URL encoded (see [RFC 3986](http://tools.ietf.org/html/rfc3986)). Due to a restriction of the used HTTP server, it is not allowed to use a backslash \[encoded as %5C\] in the embedded parameters (the context path of the URL).
+    Events are forwarded to the Recommendation System engine using "http" or "https" requests, so-called [RESTful-Requests](https://en.wikipedia.org/wiki/Representational_state_transfer). Both GET and POST methods are allowed for the event tracking. Make sure that all embedded and query string parameters are URL encoded (see [RFC 3986](https://tools.ietf.org/html/rfc3986)). Due to a restriction of the used HTTP server, it is not allowed to use a backslash \[encoded as %5C\] in the embedded parameters (the context path of the URL).
 
 ### Click Event
 
@@ -109,7 +109,7 @@ If a user opens an item/article detail, a "Click" events needs to be sent. Often
 
 The URL to track user clicks has the following format:
 
-`GET http://event.yoochoose.net/api/[customerid]/click/[userid]/[itemtypeid]/[itemid]`
+`GET https://event.yoochoose.net/api/[customerid]/click/[userid]/[itemtypeid]/[itemid]`
 
 
 |Name|Description|Values|
@@ -121,7 +121,7 @@ The URL to track user clicks has the following format:
 
 All embedded parameters are required for the request. Some optional request parameters can be set over query string parameters (GET parameters).
 
-`GET http://event.yoochoose.net/api/[customerid]/click/[userid]/[itemtypeid]/[itemid]?parameter1=value1&parameter2=value2`
+`GET https://event.yoochoose.net/api/[customerid]/click/[userid]/[itemtypeid]/[itemid]?parameter1=value1&parameter2=value2`
 
 |Name|Description|Values|
 |---|---|---|
@@ -137,7 +137,7 @@ The event should be sent if the user stays on the page for some predefined perio
 
 The URL has the following format:
 
-`GET http://event.yoochoose.net/api/[customerid]/consume/[userid]/[itemtypeid]/[itemid]`
+`GET https://event.yoochoose.net/api/[customerid]/consume/[userid]/[itemtypeid]/[itemid]`
 
 All embedded parameters are the same as for a click event. The request parameters are:
 
@@ -159,7 +159,7 @@ As the name suggests this event must be used if a user buys an item. It must be 
 
 The URL has the following format: 
 
-`GET http://event.yoochoose.net/api/[customerid]/buy/[userid]/[itemtypeid]/[itemid]?fullprice=2.50EUR&quantity=4`
+`GET https://event.yoochoose.net/api/[customerid]/buy/[userid]/[itemtypeid]/[itemid]?fullprice=2.50EUR&quantity=4`
 
 In addition to the fact that an item is bought, this event should provide information about the product price and quantity.
 
@@ -188,7 +188,7 @@ Recommendations rely on the fact that user actions can be correlated over a long
 
 The format of the URL is: 
 
-`GET http://event.yoochoose.net/api/[customerid]/login/[sourceuserid]/[targetuserid]`
+`GET https://event.yoochoose.net/api/[customerid]/login/[sourceuserid]/[targetuserid]`
 
 |Name|Description|Values|
 |---|---|---|
@@ -197,13 +197,13 @@ The format of the URL is: 
 
 !!! note "Deprecated 'transfer' event"
 
-    Based on feedback of our customers and to make the purpose a bit clearer, we renamed the formerly named 'transfer' event to 'login'. As the name implies, it should be used when a user logs in. It covers exactly the same functionality as the transfer event. There is no need to change anything on the customer's side for existing implementations as the transfer event http://event.yoochoose.net/\[solutionid\]/\[customerid\]/transfer/\[sourceuserid\]/\[targetuserid\] will still be supported but should be considered as deprecated!
+    Based on feedback of our customers and to make the purpose a bit clearer, we renamed the formerly named 'transfer' event to 'login'. As the name implies, it should be used when a user logs in. It covers exactly the same functionality as the transfer event. There is no need to change anything on the customer's side for existing implementations as the transfer event https://event.yoochoose.net/\[solutionid\]/\[customerid\]/transfer/\[sourceuserid\]/\[targetuserid\] will still be supported but should be considered as deprecated!
 
 ### Basket Event
 
 The basket event can be used to add products to a user's shopping cart. This event is especially useful if anonymized checkout is allowed or no recurring user identification is possible. By using the shopping cart products as input for getting recommendations, the empty profile or cold-start problem (meaning the user has no buy history) can be solved. The more valuable basket events instead of recent user clicks can be used to provide personalized recommendations. It also happens quite often that users "store" products on their shopping wishlist and plan to buy them later. With the help of this information, personalized shopping cart-based recommendations can be provided in the whole shop.
 
-`GET http://event.yoochoose.net/api/[customerid]/basket/[userid]/[itemtypeid]/[itemid]`
+`GET https://event.yoochoose.net/api/[customerid]/basket/[userid]/[itemtypeid]/[itemid]`
 
 |Name|Description|Values|
 |---|---|---|
@@ -217,7 +217,7 @@ Publishers, media or shops often allow commenting/rating products, articles or m
 
 The format of the URL is:
 
-`GET http://event.yoochoose.net/api/[customerid]/rate/[userid]/[itemtypeid]/[itemid]?rating=50`
+`GET https://event.yoochoose.net/api/[customerid]/rate/[userid]/[itemtypeid]/[itemid]?rating=50`
 
 This can also be used for explicit ratings like a five star rating or any other liquor scale-based rating. The predefined rating can be submitted when the user comments on an item.
 
@@ -231,7 +231,7 @@ If a website offers a link or button that allows feedback like "do not recommend
 
 The format of the URL is:
 
-`GET http://event.yoochoose.net/api/[customerid]/blacklist/[userid]/[itemtypeid]/[itemid]`
+`GET https://event.yoochoose.net/api/[customerid]/blacklist/[userid]/[itemtypeid]/[itemid]`
 
 There are no query string parameters for this event. 
 
@@ -269,7 +269,7 @@ You can still implement the traditional way as mentioned below but we **strongly
 
 If users click on a recommendation, the following event should be sent to gather statistics over the acceptance of recommendations. Click-recommended events are also known as follow-events. The URL has the following format:
 
-`GET http://event.yoochoose.net/api/[customerid]/clickrecommended/[userid]/[itemtypeid]/[itemid]?scenario=<scenarioid>`
+`GET https://event.yoochoose.net/api/[customerid]/clickrecommended/[userid]/[itemtypeid]/[itemid]?scenario=<scenarioid>`
 
 All embedded parameters are the same as for a click event. The request parameters are:
 
@@ -287,7 +287,7 @@ Render events must be sent if the website uses the recommendation provided by th
 
 The URL for a render event has the following format:
 
-`GET http://event.yoochoose.net/api/[customerid]/rendered/[userid]/[itemtypeid]/[itemid[,itemid]]`
+`GET https://event.yoochoose.net/api/[customerid]/rendered/[userid]/[itemtypeid]/[itemid[,itemid]]`
 
 The render event has the same embedded parameters as a click event except for the item ID. It is common that recommendations are rendered as a block with multiple items. To save traffic and reduce latency, it is possible to bundle multiple recommendations in one request. Several item IDs must be comma-separated.
 
@@ -297,42 +297,42 @@ Below are examples for the translation of user actions on a website into trackin
 
 User "Js79009234YU7" navigates to an item with the id 123 and type "1" which is located under Shoes -&gt; Children:
 
-`GET http://event.yoochoose.net/api/00000/click/Js79009234YU7/1/123?categorypath=%2FShoes%2FChildren`
+`GET https://event.yoochoose.net/api/00000/click/Js79009234YU7/1/123?categorypath=%2FShoes%2FChildren`
 
 Products 128, 129 and 155 of type 1 are rendered as recommendations for user "Js79009234YU7". Recommendations were delivered by the scenario "also\_bought":
 
-`GET http://event.yoochoose.net/api/00000/rendered/Js79009234YU7/1/128,129,155`
+`GET https://event.yoochoose.net/api/00000/rendered/Js79009234YU7/1/128,129,155`
 
 They click on recommended product 155 that was delivered by the call of scenario "also\_bought":
 
-`GET http://event.yoochoose.net/api/00000/clickrecommended/Js79009234YU7/1/155?scenario=also_bought`
+`GET https://event.yoochoose.net/api/00000/clickrecommended/Js79009234YU7/1/155?scenario=also_bought`
 
 User "Js79009234YU7" has watched a video with the id 452 (videos have item type "3"):
 
-`GET http://event.yoochoose.net/api/00000/consume/Js79009234YU7/3/452`
+`GET https://event.yoochoose.net/api/00000/consume/Js79009234YU7/3/452`
 
 User "Js79009234YU7" has watched 60 percent of a video with the id 466 (videos have item type "3"):
 
-`GET http://event.yoochoose.net/api/00000/consume/Js79009234YU7/3/452?percentage=60`
+`GET https://event.yoochoose.net/api/00000/consume/Js79009234YU7/3/452?percentage=60`
 
 User "Js79009234YU7" puts the product 128 and later 129 into the shopping basket.
 
-`GET http://event.yoochoose.net/api/00000/basket/Js79009234YU7/1/128`
+`GET https://event.yoochoose.net/api/00000/basket/Js79009234YU7/1/128`
 
-`GET http://event.yoochoose.net/api/00000/basket/Js79009234YU7/1/129`
+`GET https://event.yoochoose.net/api/00000/basket/Js79009234YU7/1/129`
 
 To buy selected products, user "Js79009234YU7" logs in and gets an internal identifier "johndoe" (e.g. registration ID) from the site. Do not forget that it must be URL-encoded.
 
-`GET http://event.yoochoose.net/api/00000/login/Js79009234YU7/johndoe`
+`GET https://event.yoochoose.net/api/00000/login/Js79009234YU7/johndoe`
 
 They buy both products from the shopping basket: product 128 (one piece and the price of EUR 19.99) and product 129 (2 pieces with the price of EUR 4.44 each)
 
-`GET http://event.yoochoose.net/api/00000/buy/johndoe/1/128?quantity=1&fullprice=19.99EUR`
-`GET http://event.yoochoose.net/api/00000/buy/johndoe/1/129?quantity=2&fullprice=4.44EUR`
+`GET https://event.yoochoose.net/api/00000/buy/johndoe/1/128?quantity=1&fullprice=19.99EUR`
+`GET https://event.yoochoose.net/api/00000/buy/johndoe/1/129?quantity=2&fullprice=4.44EUR`
 
 User "johndoe" likes the product 133 and wants to rate it, e.g. with 5 stars
 
-`GET http://event.yoochoose.net/api/00000/rate/Js79009234YU7/1/133?rating=5`
+`GET https://event.yoochoose.net/api/00000/rate/Js79009234YU7/1/133?rating=5`
 
 ### Response Handling
 

@@ -6,15 +6,15 @@ If you are not familiar with the usage of recommendations, please read at least 
 
 ## Installation
 
-First of all you need to install the Yoochoose Recommendation Engine Extension. It can be done through the [https://marketplace.magento.com](https://marketplace.magento.com/) webpage (search for "yoochoose"). The extension is free to download and install. The service itself is based on performance of the recommendations. See our pricing page <http://www.yoochoose.com/en/pricing/> for details.
+First of all you need to install the Yoochoose Recommendation Engine Extension. It can be done through the [https://marketplace.magento.com](https://marketplace.magento.com/) webpage (search for "yoochoose"). The extension is free to download and install. The service itself is based on performance of the recommendations. See our pricing page <https://www.yoochoose.com/en/pricing/> for details.
 
-In order to install the extension on your local Magento2 installation, your purchases need to be in sync via the Web Wizard Setup -&gt; Component Manager (<http://devdocs.magento.com/guides/v2.1/comp-mgr/module-man/compman-start.html>)
+In order to install the extension on your local Magento2 installation, your purchases need to be in sync via the Web Wizard Setup -&gt; Component Manager (<https://devdocs.magento.com/guides/v2.1/comp-mgr/module-man/compman-start.html>)
 
 ## Account Registration
 
 Before the recommendation engine can be enabled for your web shop, you must register a new "Magento Connect" account on the Yoochoose web page.
 
-[http://www.yoochoose.com/en/pricing](http://www.yoochoose.com/en/pricing/) 
+[https://www.yoochoose.com/en/pricing](https://www.yoochoose.com/en/pricing/) 
 
 Select the Magento Module in the option box (Magento2 and Magento use the same registration link).
 

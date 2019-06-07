@@ -5,7 +5,7 @@ There are several ways to integrate event reporting into the webpage. The simple
 For example: 
 
 ``` html
-<img href="http://event.yoochoose.net/ebl/00000/click/johndoe/1/100?categorypath=/a/ab/abc" width="1" height="1">
+<img href="https://event.yoochoose.net/ebl/00000/click/johndoe/1/100?categorypath=/a/ab/abc" width="1" height="1">
 ```
 
 or by javascript Image tracking
@@ -13,7 +13,7 @@ or by javascript Image tracking
 ``` js
 <script type="text/javascript">
 var img = new Image(1,1);
-img.src = "http://event.yoochoose.net/ebl/00000/click/johndoe/1/100?categorypath=/a/ab/abc";
+img.src = "https://event.yoochoose.net/ebl/00000/click/johndoe/1/100?categorypath=/a/ab/abc";
 </script>
 ```
 
@@ -35,7 +35,7 @@ If the website is implemented in a language which supports multithreading, non-b
 
 ### JSONP
 
-Another solution is to provide the proxy on the server side, which will forward script requests to the Recommender Engine. In this case the requests will be triggered from the client, when the page is already loaded and rendered. It is not possible to request the recommendation controller server directly from the javascript (over AJAX library or directly over XMLHttpRequest) because of the cross-domain restriction in most browsers. One of the possible technique to work around this limitation is [JSONP](http://en.wikipedia.org/wiki/JSONP).
+Another solution is to provide the proxy on the server side, which will forward script requests to the Recommender Engine. In this case the requests will be triggered from the client, when the page is already loaded and rendered. It is not possible to request the recommendation controller server directly from the javascript (over AJAX library or directly over XMLHttpRequest) because of the cross-domain restriction in most browsers. One of the possible technique to work around this limitation is [JSONP](https://en.wikipedia.org/wiki/JSONP).
 
 ### Using a server proxy
 
@@ -55,6 +55,6 @@ An overview of pros and cons for every technique:
 
 !!! tip "What we recommend"
 
-    We suggest using Image/Pixel tracking for non-complex events and where every page is generated on the server side without caching logic. Some hints how to use preload image URLs with (`var img = new Image(); img.src="uri"`) or without (`&lt;img src="uri"... /&gt;`) javascript elements are given under http://www.mediacollege.com/internet/javascript/image/preload.html.
+    We suggest using Image/Pixel tracking for non-complex events and where every page is generated on the server side without caching logic. Some hints how to use preload image URLs with (`var img = new Image(); img.src="uri"`) or without (`&lt;img src="uri"... /&gt;`) javascript elements are given under https://www.mediacollege.com/internet/javascript/image/preload.html.
 
     If you are planning to implement caching mechanisms and more complex events like consume (depending on viewing time of the page), basket (which is usually an in-page event) or custom in-page events that take place on the client side, we definitely recommend a javascript implementation. We provide an example script and some instructions under [Tracking with yct.js](../developer_guide/tracking_with_yct.md)

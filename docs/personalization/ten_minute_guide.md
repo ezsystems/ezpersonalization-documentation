@@ -25,7 +25,7 @@ Integration is based on the following:
 
 Step one is called tracking. Every page must call special tracking URL. The simplest way is to place a tiny image on every product page, just it is usually done for analytic tools or visitor counter. It looks like this:
 
-**`<img href="http://event.yoochoose.net/ebl/00000/click/john.smith/1/123" width="1" height="1">`**
+**`<img href="https://event.yoochoose.net/ebl/00000/click/john.smith/1/123" width="1" height="1">`**
 
 Replace "john.smith" with the user ID or session ID of the user currently signed in on your website (any URL encoded string is allowed).
 Replace "123" with the ID of the content you want to track and later on recommend.
@@ -67,12 +67,12 @@ foreach ($just_bought_products as $product_id) {
 
 Depending on the page impressions/visits the recommendation engine has soon collected enough events and is able to generate recommendations. The more tracking data is available, the better and sharper the recommendations will be. Recommendations can be fetched using following calls, the response is returned as JSON.
 
-**`http://reco.yoochoose.net/api/v2/00000/john.smith/landing_page.json`**
+**`https://reco.yoochoose.net/api/v2/00000/john.smith/landing_page.json`**
 Returns the most popular products.
 
-**`http://reco.yoochoose.net/api/v2/00000/john.smith/cross_sell.json?contextitems=OWNS,CLICKED`** Returns products the current user (here "**`john.smith`**") is most probably interested in, so-called personalized recommendations.
+**`https://reco.yoochoose.net/api/v2/00000/john.smith/cross_sell.json?contextitems=OWNS,CLICKED`** Returns products the current user (here "**`john.smith`**") is most probably interested in, so-called personalized recommendations.
 
-**`http://reco.yoochoose.net/api/v2/00000/john.smith/cross_sell.json?contextitems=123`**
+**`https://reco.yoochoose.net/api/v2/00000/john.smith/cross_sell.json?contextitems=123`**
 Returns products most probably interesting for any user who is interested in product 123.
 
 Example result with two recommendations:
@@ -117,7 +117,7 @@ Here is a small PHP snippet for making request and parsing results:
 ``` php
 $mandator_id = '00000';
 $license_key = '86109-2778-8757-7597-4319';
-$server = "http://reco.yoochoose.net";
+$server = "https://reco.yoochoose.net";
 $scenario = "category_page";
 $url = $server.'/ebl/00000/'.urlencode(session_id()).'/'.urlencode($scenario).'.json';
 
