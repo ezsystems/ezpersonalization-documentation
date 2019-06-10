@@ -4,7 +4,6 @@ copyright: "Copyright 1999-2019 eZ Systems AS and others"
 pages:
     - 'Documentation': 'index.md'
     - eZ Personalization Solution:
-        - 'eZ Personalization Solution': 'personalization/ez_personalization_solution.md'
         - 'About Personalization': 'personalization/about_personalization.md'
         - 'Ten minute guide': 'personalization/ten_minute_guide.md'
         - User guide:
@@ -54,7 +53,8 @@ theme_dir: material
 
 extra:
   version_warning: []
-  append_bootstrap: []
+  append_bootstrap:
+    - '/index.md'
 
   related_docs:
     - title: 'eZ Services Documentation'
