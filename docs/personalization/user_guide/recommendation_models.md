@@ -128,7 +128,6 @@ After the submodel is configured and built (happens automatically during the n
 
 #### Numeric Attributes
 
-Very similar configuration can be done by using a numeric attribute.
 Similar to the nominal submodels, the configuration is about the definition of subgroups. 
 It is done by selecting limits for every group.
 
