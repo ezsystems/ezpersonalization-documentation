@@ -128,11 +128,20 @@ After the submodel is configured and built (happens automatically during the n
 
 #### Numeric Attributes
 
-Very similar configuration can be done by using a numeric attribute. 
+Very similar configuration can be done by using a numeric attribute.
+Similar to the nominal submodels, the configuration is about the definition of subgroups. 
+It is done by selecting limits for every group.
 
 ![](../img/submodel_config.png)
 
-Similar to the nominal submodels, the configuration is about the definition of groups. It is done by selecting limits for every group. The logic is the same as with nominal attributes. 
+There are two values used for setting the limits — `from` and `to`.
+
+The logic behind it is as follows:
+
+- The `from` value indicates the beginning of the range of the subgroup and belongs to it.
+- The `to` value indicates only the range end and does not belong to the subgroup.
+- The **only exception** is the last of the defined subgroups.
+In its case, the `to` value indicates the range end and also belongs to it. 
 
 !!! note
 
