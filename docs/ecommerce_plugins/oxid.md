@@ -25,7 +25,7 @@ The OXID Recommendation module needs connection to the following endpoints:
 - `reco.yoochoose.net`
 - `event.yoochoose.net`
 
-Both http (port 80) and https (port 443) ports must be open for outbound TCP connections.
+Both HTTP (port 80) and HTTPS (port 443) ports must be open for outbound TCP connections.
 You cannot build the firewall rule based on the IP addresses.
 The Yoochoose infrastructure is located in the AWS cloud and IP addresses can be changed.
 
@@ -43,7 +43,9 @@ The structure should look like this:
 
 Don't worry if you see a `yoochoose/yoochoose/` in the directory tree. This is correct.
 
+!!! tip
 If you have a subfolder `Mediaopt` inside the `modules` directory, remove it.
+It is present in the older plugin versions.
 It is present in the older plugin versions.
 
 ## Activation
@@ -52,7 +54,7 @@ In the OXID administration back end go to `/Extentions/Modules/Yoochoose Recomme
 
 ![OXID activation](img/oxid_activate.png "OXID activation")
 
-After that, refresh the browser window (or hit F5).
+After that, refresh the browser window.
 A new menu element `/Yoochoose` should appear under the menu Service.
 
 ## Registration
@@ -61,16 +63,16 @@ In the OXID administration back end go to `/Yoochoose/Config `and click **Regist
 
 ![OXID registeration step 1](img/oxid_register.png "OXID registeration step 1")
 
-Register an account 
+Register an account.
 
 ![OXID registeration step 2](img/oxid_register2.png "OXID registeration step 2")
 
-Ensure that OXID Connect is selected
+Ensure that OXID Connect is selected.
 
 ![OXID Connect](img/oxid_connect.png "OXID Connect")
 
 After successful registration process you will receive a customer ID and a license key by email.
-Add this information into the corresponding fields in the module configuration page `/Yoochoose/Config`
+Add this information into the corresponding fields in the module configuration page `/Yoochoose/Config`.
 
 ![OXID configuration](img/oxid_config.png "OXID configuration")
 
@@ -81,7 +83,10 @@ Login with the email address you used in the registration process.
 
 ![OXID customer ID](img/oxid_customerid.png "OXID customer ID")
 
-Please be patient. After the plugin is activated it takes about a day until the first recommendations are available.
+!!! note
+After the plugin is activated it takes about a day until the first recommendations are available.
+The recommendation engine needs to collect statistical information before high quality recommendations can be provided.
+If enough tracking data is available, they will be rendered in your shop.
 The recommendation engine needs to collect statistical information before high quality recommendations can be provided.
 If enough tracking data is available, they will be rendered in your shop.
 
@@ -109,7 +114,7 @@ The recommendation module is configured with default recommendation boxes throug
 
 ## Disabling embedded recommendation
 
-Several database-intensive cross selling boxes are available in OXID out of the box they should be deactivated.
+Several database-intensive cross selling boxes are available in OXID out of the box and they should be deactivated.
 It can be done in the OXID admin back end in `/Master Settings/Core Settings/Performance/Enhanced Performance Settings`
 
 ![Disabling embedded recommendation](img/oxid_disable_embedded.png "Disabling embedded recommendation")

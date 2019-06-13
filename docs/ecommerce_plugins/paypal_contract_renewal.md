@@ -10,14 +10,14 @@ Step 1: Go to [Yoochoose web page](https://admin.yoochoose.net) and log in with 
 
 ![Login screen for admin.yoochoose.net](img/paypal_renew_step1.png)
 
-Step 2: Click **Edit contract data** at the top. (If you have a German account, the link will say **Vertragsdaten ändern**).
+Step 2: At the top of the page, click **Edit contract data** (Vertragsdaten ändern).
 
 ![Dashboard with the Edit contract data option](img/paypal_renew_step2.png)
 
-Step 3: A new window opens with the Billwerk partner site.
+A new window opens with the Billwerk partner site.
 Billwerk is responsible for handling Personalization payments.
 
-In the Billwerk customer portal, in the section **Ihre Zahlungsdaten** (Payment method), click **Ändern** (Change) to select a payment method.
+Step 3:  In the Billwerk customer portal, in the section **Ihre Zahlungsdaten** (Payment method), click **Ändern** (Change) to select a payment method.
 
 ![Billwerk portal with payment data](img/paypal_renew_step3.png)
 

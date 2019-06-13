@@ -12,7 +12,7 @@ The extension is free to download and install.
 The service itself is based on performance of the recommendations.
 See [Performance Pricing section](https://www.yoochoose.com/en/pricing/) for details.
 
-In order to install the extension on your local Magento2 installation, your purchases need to be synced via the Web Wizard Setup > [Component Manager](https://devdocs.magento.com/guides/v2.1/comp-mgr/module-man/compman-start.html)
+In order to install the extension on your local Magento2 installation, your purchases need to be synced via the [Component Manager](https://devdocs.magento.com/guides/v2.1/comp-mgr/module-man/compman-start.html)
 
 ## Account registration
 
@@ -23,14 +23,13 @@ Select the **Magento Module** in the option box (Magento2 and Magento use the sa
 ![Magneto Registration](img/magento_register.png)
 
 An account contains a default configuration scenario for a standard web shop.
-If you are configuring a highly visited web shop (over a million page requests per month), you should ask for additional consultation and phone support by Yoochoose GmbH.
+If you are configuring a highly visited web shop (over a million page requests per month), you should ask Yoochoose GmbH for additional consultation and phone support.
 
-The registration itself is straightforward and self-explanatory.
-After it is finished, you will get a customer ID and the license key for the recommendation extension.
+Once the registration is finished, you will get a customer ID and the license key for the recommendation extension.
 
 ## Activation of the YOOCHOOSE extension
 
-The Extension configuration/enabling is located in the Magento Admin Panel under Stores > Configuration > YOOCHOOSE
+The Extension configuration/enabling is located in the Magento Admin Panel under **Stores** > **Configuration** > **YOOCHOOSE**.
 
 ![Activation of the YOOCHOOSE Extension](img/magento_activate.png "Activation of the YOOCHOOSE Extension")
 
@@ -40,7 +39,7 @@ In the admin interface of Magento 2 enter your customer ID and license key.
 
 The Magento2 Recommendation module needs connection to the Yoochoose configuration server: `admin.yoochoose.net`
 
-Both http (port 80) and https (port 443) ports must be open for outbound TCP connections.
+Both HTTP (port 80) and HTTPS (port 443) ports must be open for outbound TCP connections.
 You cannot build the firewall rule based on the IP addresses.
 The Yoochoose infrastructure is located in the AWS cloud and the IP addresses can change.
 
@@ -48,7 +47,7 @@ The Yoochoose infrastructure is located in the AWS cloud and the IP addresses ca
 
 The Yoochoose extension will automatically launch after the installation is completed. After that the extension will track page visitors and personalize shopping experience for them.
 
-Following options are available:
+The following options are available:
 
 - **Bestsellers** are shown on the home page for all visitors and on the main category pages. 
 - **Personal recommendations** are shown to registered customers or to anonymous visitors with a persistent or long living session. It analyses the purchasing and click history of the visitors and suggests new products.
@@ -56,11 +55,11 @@ Following options are available:
 ![Landing and Category page](img/magento_landing_page.png "Landing and Category page")
 
 - Category **Related** is created with products that customers usually buy together with the current product (e.g. butter and bread).
-- **Upselling** recommendations (on the product details block) show products that customers buy instead of the current product (for example printer *Canon* instead of *HP*).
+- **Upselling** recommendations (on the product details block) show products that customers buy instead of the current product (for example printer *X* instead of *Z*).
 
 ![Detail Page](img/magento_detail_page.png "Detail Page")
 
-- **Cross selling** products are similar to the related products, but they are calculated based on the customer's shopping cart.
+- **Cross sell** products are similar to the related products, but they are calculated based on the customer's shopping cart.
 
 ![Shopping Cart](img/magento_shopping_cart.png "Shopping Cart")
 
@@ -75,7 +74,7 @@ An example of the search results can be seen here:
 
 ![Personalized Search results](img/magento_search_results.png "Personalized Search results")
 
-## Development and Maintenance
+## Development and maintenance
 
 Further development of the extension is welcome.
 Visit our [bitbucket repository](https://bitbucket.org/yoochoose/).
