@@ -44,9 +44,9 @@ The structure should look like this:
 Don't worry if you see a `yoochoose/yoochoose/` in the directory tree. This is correct.
 
 !!! tip
-If you have a subfolder `Mediaopt` inside the `modules` directory, remove it.
-It is present in the older plugin versions.
-It is present in the older plugin versions.
+
+    If you have a subfolder `Mediaopt` inside the `modules` directory, remove it.
+    It is present in the older plugin versions.
 
 ## Activation
 
@@ -84,11 +84,11 @@ Login with the email address you used in the registration process.
 ![OXID customer ID](img/oxid_customerid.png "OXID customer ID")
 
 !!! note
-After the plugin is activated it takes about a day until the first recommendations are available.
-The recommendation engine needs to collect statistical information before high quality recommendations can be provided.
-If enough tracking data is available, they will be rendered in your shop.
-The recommendation engine needs to collect statistical information before high quality recommendations can be provided.
-If enough tracking data is available, they will be rendered in your shop.
+
+    After the plugin is activated **it takes about a day until the first recommendations are available**.
+    
+    The recommendation engine needs to collect statistical information before high quality recommendations can be provided.
+    If enough tracking data is available, they will be rendered in your shop.
 
 ## Structure and Functionality
 

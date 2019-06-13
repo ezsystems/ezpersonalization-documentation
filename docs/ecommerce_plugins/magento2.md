@@ -18,9 +18,10 @@ In order to install the extension on your local Magento2 installation, your purc
 
 Before enabling the recommendation engine for your web shop, register a new *Magento Connect* account on the [Yoochoose web page](https://www.yoochoose.com/en/pricing/).
 
-Select the **Magento Module** in the option box (Magento2 and Magento use the same [registration link](https://admin.yoochoose.net/login.html?product=magento_Direct&lang=en_US#login)).
-
 ![Magneto Registration](img/magento_register.png)
+
+Select the **Magento** Module in the option box or use direct [registration link](https://admin.yoochoose.net/login.html?product=magento_Direct&lang=en_US#login).
+ Magento2 and Magento use the same link for registration.
 
 An account contains a default configuration scenario for a standard web shop.
 If you are configuring a highly visited web shop (over a million page requests per month), you should ask Yoochoose GmbH for additional consultation and phone support.
