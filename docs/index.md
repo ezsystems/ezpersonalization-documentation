@@ -10,13 +10,13 @@
 
 <div class="card-group">
     <div class="card text-center">
-        <div class="card-body"><a href="/personalization/user_guide/introduction/">
+        <div class="card-body"><a href="personalization/user_guide/introduction/">
         <svg class="ez-icon front-page-icon">
             <use xlink:href="images/ez-icons.svg#content-draft"></use>
         </svg>
         </a></div>
         <div class="card-footer bg-transparent">
-            <p class="card-text"><a href="/personalization/user_guide/introduction/" class="card-link">User guide</a></p>
+            <p class="card-text"><a href="personalization/user_guide/introduction/" class="card-link">User guide</a></p>
         </div>
     </div>
     <div class="card text-center">
