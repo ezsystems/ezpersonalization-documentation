@@ -10,9 +10,7 @@ Step 1: Go to [Yoochoose web page](https://admin.yoochoose.net) and log in with 
 
 ![Login screen for admin.yoochoose.net](img/paypal_renew_step1.png)
 
-Step 2: At the top of the page, click **Edit contract data** (Vertragsdaten ändern).
-
-![Dashboard with the Edit contract data option](img/paypal_renew_step2.png)
+Step 2: At the top of the page, click your login and choose **Edit contract data** (Vertragsdaten ändern).
 
 A new window opens with the Billwerk partner site.
 Billwerk is responsible for handling Personalization payments.
