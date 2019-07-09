@@ -64,21 +64,17 @@ Products on this list will never be recommended in any scenario. Usually test pr
 
 Most of the models provide additional configuration parameters for customization. Here is an example:
 
-Open a Scenario configuration in the Dashboard
+Open a model configuration in the Dashboard and enter the model configuration of a Collaborative-Filtering model
 
-![Scenario configuration in the Dashboard](../img/scenario_config_in_dashboard.png)
+![Model configuration in the Dashboard](../img/model_config_in_dashboard.png)
 
-and enter the model configuration of a Collaborative-Filtering model
-
-![Scenario configuration - Collaborative-Filtering](../img/scenario_config_collaborative.png)
-
-![Scenario configuration details](../img/scenario_config_details.png)
+![Model configuration details](../img/model_config_details.png)
 
 or an Editor-Based model
 
-![Scenario configuration - Editor-Based model](../img/scenario_config_editor.png)
+![Model configuration - Editor-Based model](../img/model_config_editor.png)
 
-![Scenario configuration - Editorial list](../img/scenario_config_editorial_list.png)
+![Model configuration - Editorial list](../img/model_config_editorial_list.png)
 
 The parameters supported by the different types of models are described in the table below. Some models support submodels, see chapter [Submodels](#submodels) for more information. Additional differentiation criteria is the supported [context](Definitions_32869233.html#Definitions-Context). If a model requires context it can only be linked to scenarios that provide the necessary context.
 
@@ -109,13 +105,13 @@ If the possible values of some attribute are a limited set of values, we talk ab
 
 Submodels must be manually configured. Therefore it works only if the number of possible values is relatively small and there is a large group of products for every value. Good examples would be "color" for clothing store, "genre" for a book store or "city district" for a newspaper. Bad examples would be ~~street name~~ (there are too many of them), ~~book author~~ (there are too many of them as well) or EAN-Code (they are unique and therefore hard to group).
 
-Coming back to the color example. We are configuring submodels for a clothing store and want to get recommendations for some color (it can be a predefined color or a color of the context item). Every manufacturer has its own color classification. Similar colors can be grouped together as shown in the picture below:
+Coming back to the color example. We are configuring submodels for `a clothing store and want to get recommendations for some color (it can be a predefined color or a color of the context item). Every manufacturer has its own color classification. Similar colors can be grouped together as shown in the picture below:
 
-![](../img/attribute_example.png)
+![Attribute example](../img/attribute_example.png)
 
 The configuration is done using the property dialog of the recommendation model.
 
-![](../img/attribute_config.png)
+![Attribute configuration](../img/attribute_config.png)
 
 After the submodel is configured and built (happens automatically during the nightly build process) there are several cases for recommendations. Based on the example above the following are possible:
 
@@ -131,7 +127,7 @@ After the submodel is configured and built (happens automatically during the n
 Similar to the nominal submodels, the configuration is about the definition of subgroups. 
 It is done by selecting limits for every group.
 
-![](../img/submodel_config.png)
+![Submodel configuration](../img/submodel_config.png)
 
 There are two values used for setting the limits — `from` and `to`.
 

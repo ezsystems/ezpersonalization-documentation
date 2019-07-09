@@ -98,7 +98,7 @@ For every recommendation scenario a set of filters can be defined. They are appl
 
 In addition to general filters, which remove specified elements from recommendations, the boost filter allows shifting (boosting) selected recommended items to the top positions of the recommendation response. This may happen if a selected attribute of the customer has the same value as the selected attribute of the recommended item. For example, we can show the news from the user's home country with higher priority than the rest.
 
-Assuming every item in the picture below has the attribute "country" and the user has the attribute "country\_of\_origin", the boost filter can be configured like this:
+Assuming every item in the picture below has the attribute "country" and the user has the attribute "country\_of\_origin", the boost filter can be configured in **Filter settings** like this:
 
 ![Boost filter settings](../img/boost_filters.png)
 
