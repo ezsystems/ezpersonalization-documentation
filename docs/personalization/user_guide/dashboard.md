@@ -30,19 +30,25 @@ All statistical information can be downloaded in MS Excel format. The timeframes
 
 ### Scenarios
 
-The scenario overview on the bottom of the dashboard shows all available scenarios. Additional info like a description and the delivered recommendations in the selected timeframes are also presented.
+The scenario overview shows all available scenarios. Additional info like a description and the delivered recommendations in the selected timeframes are also presented.
 
 ![Dashboard scenarios](../img/dashboard_scenarios.png)
 
-Scenarios with green status bars indicate that all models can provide recommendations. Yellow bars indicate that only a part of the configured models can provide recommendations and red ones indicate that no recommendations can be delivered (see [6. Recommendation Models](recommendation_models.md) and [8. Scenarios](scenarios.md)).
+Scenarios with green status bars indicate that all models can provide recommendations. Yellow bars indicate that only a part of the configured models can provide recommendations and red ones indicate that no recommendations can be delivered. See [8. Scenarios](scenarios.md).
 
-### Added Revenue
+### Models
+
+This tab allows you to see all available models and configure them, see [6. Recommendation Models](recommendation_models.md) 
+
+![Dashboard models](../img/dashboard_models.png)
+
+### Revenue details
 
 This tab shows you when recommendations were bought and how much time passed between the click on the recommendation and the buying event.
 
 ![Dashboard Added Revenue](../img/dashboard_added_revenue.png)
 
-### A/B Tests
+### A/B Testing
 
 This tab holds an overview of A/B Tests. Finished, currently running and scheduled tests are listed here.
 
@@ -50,11 +56,11 @@ This tab holds an overview of A/B Tests. Finished, currently running and schedul
 
 ### Plugins
 
-If a plugin was used to register the service, specific settings can be configured here.
+If a plugin was used to register the service, specific settings can be configured under **Plugins**.
 
 ![Dashboard Plugins](../img/dashboard_plugins.png)
 
-### Item Import
+### Import/Export
 
 Item import jobs are used to fetch data from a customer system. Data-mappings and schedule times are defined here.
 
@@ -62,6 +68,5 @@ Item import jobs are used to fetch data from a customer system. Data-mappings an
 
 ### Newsletter
 
-Newsletters are sent out if certain events happen, like a user did not come back for n days or the shopping cart was abandoned. Style and conditions are configured in this tab.
+Newsletters are sent out if certain events happen, e.g. a user did not come back for a number of days or the shopping cart was abandoned. Style and conditions are configured in the **Newsletter** tab.
 
-![Dashboard Newsletter](../img/dashboard_newsletter.png)

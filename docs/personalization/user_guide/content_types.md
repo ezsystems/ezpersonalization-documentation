@@ -26,7 +26,7 @@ Below is a comparison for different ways of splitting content in the recommendat
 
 If multiple content types are enabled, one must enable this output type for every scenario that should recommend this type.
 
-![Scenario configuration](../img/scenario_configuration.png)
+![Scenario settings](../img/scenario_configuration.png)
 
 Every scenario supports a single input type and multiple output types (see [8. Scenarios](scenarios.md)). Every recommendation request delivers only content of one output content type (even if multiple are selected in the interface above). The output type is set during the recommendation request and must be covered by the list of the supported content types in the requested scenario.
 
