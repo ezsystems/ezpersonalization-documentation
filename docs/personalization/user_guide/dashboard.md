@@ -34,7 +34,7 @@ The scenario overview shows all available scenarios. Additional info like a desc
 
 ![Dashboard scenarios](../img/dashboard_scenarios.png)
 
-Scenarios with green status bars indicate that all models can provide recommendations. Yellow bars indicate that only a part of the configured models can provide recommendations and red ones indicate that no recommendations can be delivered see [8. Scenarios](scenarios.md).
+Scenarios with green status bars indicate that all models can provide recommendations. Yellow bars indicate that only a part of the configured models can provide recommendations and red ones indicate that no recommendations can be delivered. See [8. Scenarios](scenarios.md).
 
 ### Models
 
@@ -68,5 +68,5 @@ Item import jobs are used to fetch data from a customer system. Data-mappings an
 
 ### Newsletter
 
-Newsletters are sent out if certain events happen, like a user did not come back for n days or the shopping cart was abandoned. Style and conditions are configured in **Newsletter** tab.
+Newsletters are sent out if certain events happen, e.g. a user did not come back for a number of days or the shopping cart was abandoned. Style and conditions are configured in the **Newsletter** tab.
 

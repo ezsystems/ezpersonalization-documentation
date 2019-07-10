@@ -105,7 +105,7 @@ If the possible values of some attribute are a limited set of values, we talk ab
 
 Submodels must be manually configured. Therefore it works only if the number of possible values is relatively small and there is a large group of products for every value. Good examples would be "color" for clothing store, "genre" for a book store or "city district" for a newspaper. Bad examples would be ~~street name~~ (there are too many of them), ~~book author~~ (there are too many of them as well) or EAN-Code (they are unique and therefore hard to group).
 
-Coming back to the color example. We are configuring submodels for `a clothing store and want to get recommendations for some color (it can be a predefined color or a color of the context item). Every manufacturer has its own color classification. Similar colors can be grouped together as shown in the picture below:
+Coming back to the color example. We are configuring submodels for a clothing store and want to get recommendations for some color (it can be a predefined color or a color of the context item). Every manufacturer has its own color classification. Similar colors can be grouped together as shown in the picture below:
 
 ![Attribute example](../img/attribute_example.png)
 
