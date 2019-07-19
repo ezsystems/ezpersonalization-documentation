@@ -6,23 +6,30 @@ Collection of data from a database or IT System (e.g. a shop system or a CMS) th
 
 #### Catalog Data
 
-[Content](#content) that is used to build the catalog that is used for the Service. The catalog data can contain different content types
+[Content](#content) that is used to build the Catalog used for the Service.
+The Catalog data can contain different Content Types.
 
 ####Category path
 
-The category path is the logical path on a website which leads to the current category. For example, if the current category is "Sandals" then the corresponding logical category path is "Women/Summer/Sandals". You can describe it as the "path via categories to reach the content".
+The category path is the logical path on a website which leads to the current category.
+For example, if the current category is "Sandals" then the corresponding logical category path is "Women/Summer/Sandals".
+You can describe it as the "path via categories to reach the content".
 
 #### Content
 
-Content is an abstract name of all data like products, videos, pictures, articles, blogs, etc. which constitute a Catalog. Different content is identified by its [content type](#content-type)
+Content is an abstract name of all data like products, videos, pictures, articles, blogs, etc. which constitute a Catalog.
+Different content is identified by its [content type](#content-type)
 
 #### Content Type
 
-Content type identifies different content elements such as products, videos, pictures in the catalog. You can e.g. have videos of content type 1 (YouTube videos) and of content type 2 (Vimeo videos).
+Content type identifies different content elements such as products, videos, pictures in the catalog.
+You can e.g. have videos of content type 1 (YouTube videos) and of content type 2 (Vimeo videos).
 
 ####Context
 
-Context is the current environment of the user. An example could be the logical position on a website, the (current) time or the location. It is used to enhance recommendations
+Context is the current environment of the user.
+An example could be the logical position on a website, the (current) time or the location.
+It is used to enhance recommendations.
 
 #### Explicit User Data
 
@@ -60,7 +67,9 @@ Product is a special type of [Content](#content)
 
 #### Recommendation Engine
 
-A Service that delivers recommendations based on user data and a content catalog. Several models and filters are used to create a resulting set of recommendations. It is a kind of an intelligent WhiteBox.
+A Service that delivers recommendations based on user data and a content catalog.
+Several models and filters are used to create a resulting set of recommendations.
+It is a kind of an intelligent WhiteBox.
 
 #### Recommendations
 
@@ -82,10 +91,12 @@ A scenario is a configuration for fetching recommendation. It includes filters, 
 
 #### Submodels
 
-Submodels are prefiltered recommendations and contain parts of the main model. For example, only content about certain cities is included and not all content
+Submodels are prefiltered recommendations and contain parts of the main model.
+For example, only content about certain cities is included and not all content.
 
 #### User Data
 
-User data is all data that is collected about the user. It can be either implicit data that is collected by tracking events like clicks, or explicit data that is collected through user feedback like using a "like" button or on a recommendation.
+User data is all data that is collected about the user.
+It can be either implicit data that is collected by tracking events like clicks, or explicit data that is collected through user feedback like using a "like" button or on a recommendation.
 
 User data also contains attributes of the user. This could be gender, user type etc.

@@ -32,9 +32,9 @@ An overview of pros and cons for each of the above techniques:
 
 |Problem|Simple Way|Bottom loading|Background loading|JSONP|XMLHttpRequest + Proxy|
 |---|---|---|---|---|---|
-|Is not blocked by ad blockers or no-track plug-ins|Yes|Yes|Yes||Yes|
-|Works if JavaScript is disabled|Yes|depends||||	 	 
-|Works for server without multithreading functionality|Yes|Yes||Yes|Yes|
-|Compatible with frontend caching on the server||||Yes|Yes|
-|Does not delay page rendering||depends|depends|Yes|Yes|
-|Supports authentication for recommendation fetching|Yes|Yes|Yes||depends|
+|Is not blocked by ad blockers or no-track plug-ins|Yes|Yes|Yes|-|Yes|
+|Works if JavaScript is disabled|Yes|depends|-|-|-|	 	 
+|Works for server without multithreading functionality|Yes|Yes|-|Yes|Yes|
+|Compatible with frontend caching on the server|-|-|-|Yes|Yes|
+|Does not delay page rendering|-|depends|depends|Yes|Yes|
+|Supports authentication for recommendation fetching|Yes|Yes|Yes|-|depends|

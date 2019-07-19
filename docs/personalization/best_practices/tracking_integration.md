@@ -47,11 +47,11 @@ An overview of pros and cons for every technique:
 
 | Problem | Image | Server Side | Bottom Reporting | Async. Reporting | JSON | XMLHttpRequest + Proxy |
 |----|-----|-----|-----|-----|-----|------|
-| Is not blocked by ad blockers or no-track plug-ins. || Yes | Yes | Yes || Yes |
-| Works if JavaScript is disabled. | Yes | Yes | Yes | Yes |||
-| Is compatible with frontend caching on the server. |||||Yes | Yes |
-| Does not delay page rendering. | Yes || Yes | Yes | Yes | Yes |
-| Supports authentication for event tracking (not implemented yet) || Yes | Yes | Yes || depends |
+| Is not blocked by ad blockers or no-track plug-ins. |-| Yes | Yes | Yes |-| Yes |
+| Works if JavaScript is disabled. | Yes | Yes | Yes | Yes |-|-|
+| Is compatible with frontend caching on the server. |-|-|-|-|Yes | Yes |
+| Does not delay page rendering. | Yes |-| Yes | Yes | Yes | Yes |
+| Supports authentication for event tracking (not implemented yet) |-| Yes | Yes | Yes |-| depends |
 
 !!! tip "What we recommend"
 
