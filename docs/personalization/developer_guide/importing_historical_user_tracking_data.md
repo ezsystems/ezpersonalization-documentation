@@ -22,7 +22,7 @@ There must be some validation to avoid importing buy events by any user. Therefo
 
     **invalid**: `https://event.yoochoose.net/api/00000/buy/johndoe/1/11?fullprice=19.99EUR&overridetimestamp=2012-01-01T11%3A00%3A00&quantity=&signature=d0026f017ae823f19530d93318c5a2f6`
 
-### Example
+## Example
 
 Given a license key of "8695-1828-92810-5535-4239" and a purchase of certain products, we have the following signature values:
 

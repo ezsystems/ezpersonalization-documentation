@@ -177,8 +177,8 @@ In most cases the response of the recommendation service can be cached for some 
 |Scope|||Example|Format|
 |---|---|---|---|---|
 |Request|`If-Modified-Since`|Allows a *304 Not Modified* to be returned if content is unchanged.|`If-Modified-Since: Sat, 29 Oct 2013 19:43:31 GMT`|"HTTP-date" format as defined by [RFC 2616](https://tools.ietf.org/html/rfc2616)|
-|Response|`Last-Modified`|The last modification date of the recommendations.|`Last-Modified: Tue, 15 Nov 2013 12:45:26 GMT`|
-||`Expires`|Gives the date/time after which the response is considered to be outdated|`Expires: Thu, 01 Dec 2013 16:00:00 GMT`|
+|Response|`Last-Modified`|The last modification date of the recommendations.|`Last-Modified: Tue, 15 Nov 2013 12:45:26 GMT`|-|
+||`Expires`|Gives the date/time after which the response is considered to be outdated|`Expires: Thu, 01 Dec 2013 16:00:00 GMT`|-|
 
 The last modification timestamp indicates a change that could influence the recommendation response. It depends on an updated recommendation calculation, an update of an item or some scenario configuration changes. The expiration timestamp is a best-effort prediction based on the model building configuration and provided context. The shortest expiration period is 5 minutes from the request time. The longest is 24 hours. In the table below several examples are illustrated:
 
@@ -225,9 +225,9 @@ An overview of pros and cons for each of the above techniques:
 
 |Problem|Simple Way|Bottom loading|Background loading|JSONP|XMLHttpRequest + Proxy|
 |---|---|---|---|---|---|
-|Is not blocked by ad blockers or no-track plug-ins|Yes|Yes|Yes||Yes|
-|Works if JavaScript is disabled|Yes|depends||||	 	 
-|Works for server without multithreading functionality|Yes|Yes||Yes|Yes|
-|Compatible with frontend caching on the server||||Yes|Yes|
-|Does not delay page rendering||depends|depends|Yes|Yes|
-|Supports authentication for recommendation fetching|Yes|Yes|Yes||depends|
+|Is not blocked by ad blockers or no-track plug-ins|Yes|Yes|Yes|-|Yes|
+|Works if JavaScript is disabled|Yes|depends|-|-|-|	 	 
+|Works for server without multithreading functionality|Yes|Yes|-|Yes|Yes|
+|Compatible with frontend caching on the server|-|-|-|Yes|Yes|
+|Does not delay page rendering|-|depends|depends|Yes|Yes|
+|Supports authentication for recommendation fetching|Yes|Yes|Yes|-|depends|

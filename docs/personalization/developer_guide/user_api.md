@@ -8,7 +8,7 @@
 
 It is useful to add metadata to users in order to classify them and attach them to user-type clusters. We provide the following "user metadata" import format in order to enrich tracked user data with information that cannot be calculated from their behavior but only provided by a customer itself. An example for this metadata could be "gender", "postal code", "discount rate", etc. 
 
-!! note
+!!! note
 
     Please contact <support@yoochoose.com> if you are planning to import user metadata in order to be compliant with privacy regulations.
 

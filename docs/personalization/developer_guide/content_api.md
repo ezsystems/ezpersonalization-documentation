@@ -74,13 +74,13 @@ Following is a brief description of the attributes
 |---|---|---|---|
 |id|The item's id|yes|Integer|
 |type|The item's type|yes|Integer|
-|description|Additional information about the item||String|
-|price|The item's price (e.g. in EUR cents)||Integer (see below)|
-|currency|Currency used, by default EUR is assumed||ISO 4217|
-|validfrom|Defines, together with validto, the "lifespan" of an item. If NULL or not available, the item is considered valid||ISO 8601 (see below)|
-|validto|Defines, together with validfrom, the "lifespan" of an item. If NULL or not available, the item is considered valid||ISO 8601|
-|categorypath|A logical (website) navigation path through which the item can be reached in the customer's system||String, separated with "%2F" (encoded /)|
-|categoryid|The category ID. Deprecated. Use "categorypath" instead!||Integer|
+|description|Additional information about the item|-|String|
+|price|The item's price (e.g. in EUR cents)|-|Integer (see below)|
+|currency|Currency used, by default EUR is assumed|-|ISO 4217|
+|validfrom|Defines, together with validto, the "lifespan" of an item. If NULL or not available, the item is considered valid|-|ISO 8601 (see below)|
+|validto|Defines, together with validfrom, the "lifespan" of an item. If NULL or not available, the item is considered valid|-|ISO 8601|
+|categorypath|A logical (website) navigation path through which the item can be reached in the customer's system|-|String, separated with "%2F" (encoded /)|
+|categoryid|The category ID. Deprecated. Use "categorypath" instead!|-|Integer|
 
 #### Empty Products
 

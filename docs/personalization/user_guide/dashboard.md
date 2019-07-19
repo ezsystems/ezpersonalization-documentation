@@ -28,6 +28,12 @@ All statistical information can be downloaded in MS Excel format. The timeframes
 
 ## Configuration Settings
 
+### Revenue details
+
+This tab shows you when recommendations were bought and how much time passed between the click on the recommendation and the buying event.
+
+![Dashboard Added Revenue](../img/dashboard_added_revenue.png)
+
 ### Scenarios
 
 The scenario overview shows all available scenarios. Additional info like a description and the delivered recommendations in the selected timeframes are also presented.
@@ -42,11 +48,11 @@ This tab allows you to see all available models and configure them, see [6. Reco
 
 ![Dashboard models](../img/dashboard_models.png)
 
-### Revenue details
+### Preview
 
-This tab shows you when recommendations were bought and how much time passed between the click on the recommendation and the buying event.
+This tab shows you recommendation preview based on a Scenario.
 
-![Dashboard Added Revenue](../img/dashboard_added_revenue.png)
+![Dashboard Preview](../img/dashboard_preview.png)
 
 ### A/B Testing
 
