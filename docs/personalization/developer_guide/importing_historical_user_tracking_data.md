@@ -1,20 +1,26 @@
 # Importing historical user tracking data
 
-We support replaying historical user events by adding a special parameter *overridetimestamp* on the buy event to simulate the event date. This is then used as the datetime of an event instead of the current timestamp of the request.
+We support replaying historical user events by adding a special parameter *overridetimestamp* on the buy event to simulate the event date.
+This is then used as the datetime of an event instead of the current timestamp of the request.
 
-To give an example: It is often requested to import the buy history of users to avoid the cold start problem and being able to start with good recommendations. You do not have to wait to build user profiles by collecting events from the day you implemented the tracking. Usually a curl input file is generated which creates buy requests that are sent to our tracking endpoint.
+To give an example: It is often requested to import the buy history of users to avoid the cold start problem and being able to start with good recommendations.
+You do not have to wait to build user profiles by collecting events from the day you implemented the tracking.
+Usually a curl input file is generated which creates buy requests that are sent to our tracking endpoint.
 
 !!! note "User identifiers"
 
     Assure that user identifiers being used in an import file are the same that are used in the live tracking, e.g. the user login identifiers!
 
-There must be some validation to avoid importing buy events by any user. Therefore a signature param needs to be added, which is calculated like following:
+There must be some validation to avoid importing buy events by any user.
+Therefore a signature param needs to be added, which is calculated like following:
 
 `String signature=md5(encode("<itemtype>&<itemid>&<licensekey>&fullprice=<fullprice>&overridetimestamp=<timestamp>&quantity=<quantity>"));`
 
 !!! caution "Params without a value"
 
-    The order of the params to be signed is crucial. They must be sent in alphabetical order based on the parameter names to create a signature. Encodings must always contain capital letters (e.g. %3A and not %3a)
+    The order of the params to be signed is crucial.
+    They must be sent in alphabetical order based on the parameter names to create a signature.
+    Encodings must always contain capital letters (e.g. %3A and not %3a)
 
     If a param value is "" or "null" or "undefined" it needs to be excluded from the signing and must not be sent in the querystring!
 

@@ -75,4 +75,3 @@ Item import jobs are used to fetch data from a customer system. Data-mappings an
 ### Newsletter
 
 Newsletters are sent out if certain events happen, like a user did not come back for n days or the shopping cart was abandoned. Style and conditions are configured in **Newsletter** tab.
-

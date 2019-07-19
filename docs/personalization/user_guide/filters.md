@@ -69,7 +69,7 @@ To provide category filtering, the recommendation engine must know the categorie
 
 For every recommendation scenario a set of filters can be defined. They are applied to all recommendations from every model linked to this scenario. In the edit dialogue of a scenario you can find the user interface to manage filters.
 
-![General filter settings](../img/general_filters.png)
+![General filter settings](../img/scenario_configuration_full.png)
 
 |Filter|Requirements and restrictions|
 |---|---|

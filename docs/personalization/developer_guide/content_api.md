@@ -4,11 +4,17 @@
 
 !!! note
 
-    All features described in this chapter are available only for the advanced edition of the Recommender Engine. **BASIC Authentication** is enabled by default. Use the customerID as username and the license key as password. The license key is displayed in the upper right of the Admin GUI ([https://admin.yoochoose.net](https://admin.yoochoose.net/)) after logging in with your registration credentials.
+    All features described in this chapter are available only for the advanced edition of the Recommender Engine.
+    **BASIC Authentication** is enabled by default.
+    Use the customerID as username and the license key as password.
+    The license key is displayed in the upper right of the Admin GUI ([https://admin.yoochoose.net](https://admin.yoochoose.net/)) after logging in with your registration credentials.
 
-The Recommender Engine needs updated information from the web presence of the customer to generate personalized recommendations for the user profile. To get such information an event tracking process is required to collect events like clicks, purchases, consumes, etc.
+The Recommender Engine needs updated information from the web presence of the customer to generate personalized recommendations for the user profile.
+To get such information an event tracking process is required to collect events like clicks, purchases, consumes, etc.
 
-In addition to events collected by the Recommender, the Recommender Engine can use external information about the products. This information must be uploaded to the Recommender Engine by the website owner. Here are some examples:
+In addition to events collected by the Recommender, the Recommender Engine can use external information about the products.
+This information must be uploaded to the Recommender Engine by the website owner.
+Here are some examples:
 
 - **Product price** - Products cheaper than the specified threshold can be filtered out from recommendations.
 - **Availability time period** - Products will be recommended only in the specified time window.
@@ -57,7 +63,10 @@ The XML format for an item import is the same for the PULL and PUSH interface. H
 
 #### Implicit vs. explicit update of category paths
 
-Product attributes which can be uploaded through the data import interface include the path of the category/categories that the product is located in. The category path can be also updated over the "click" events. If the products are regularly uploaded over the data import interface, the click event should **not** contain the category path information. E.g. a product is clicked in the "TopSeller" section and the category path `%2FTopSeller` is sent, which is mostly undesired as it is originally located under `%2FGarden%2F`.
+Product attributes which can be uploaded through the data import interface include the path of the category/categories that the product is located in.
+The category path can be also updated over the "click" events.
+If the products are regularly uploaded over the data import interface, the click event should **not** contain the category path information.
+E.g. a product is clicked in the "TopSeller" section and the category path `%2FTopSeller` is sent, which is mostly undesired as it is originally located under `%2FGarden%2F`.
 
 Enabling both update ways for category path is possible, but it has the following side effects:
 
@@ -84,19 +93,27 @@ Following is a brief description of the attributes
 
 #### Empty Products
 
-All the elements and attributes except the item **type** and the item **id** are optional. It is possible to upload a product without any additional information, e.g. if the random recommendation model is used or on-the-fly boosting and filtering of recommendations is intended to be used. In this case the Recommendation Engine will randomly recommend the imported products even if they have to related events. This is useful for a news agency, where new products (=news) are published very frequently.
+All the elements and attributes except the item **type** and the item **id** are optional.
+It is possible to upload a product without any additional information, e.g. if the random recommendation model is used or on-the-fly boosting and filtering of recommendations is intended to be used.
+In this case the Recommendation Engine will randomly recommend the imported products even if they have to related events.
+This is useful for a news agency, where new products (=news) are published very frequently.
 
 #### Field Formats
 
 The key attribute in the elements **attribute** and **content** must contain only letters, numbers and underscores.
 
-Price is formatted as the amount of "cents", for example 1234 for 12 Euros and 34 Cents. If the currency doesn't contain the cent part, the main currency is used, for example 12 for 12 Japanese Yen. See [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217#cite_note-ReferenceA-6) to check if the selected currency has a "cents" part.
+Price is formatted as the amount of "cents", for example 1234 for 12 Euros and 34 Cents. If the currency doesn't contain the cent part, the main currency is used, for example 12 for 12 Japanese Yen.
+See [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217#cite_note-ReferenceA-6) to check if the selected currency has a "cents" part.
 
 Validity Dates are formatted as specified in [XSD format](https://www.w3.org/TR/xmlschema-2/#dateTime) *without a time zone*. Time zone is the default timezone of the mandator which is used.
 
 #### Attributes
 
-It is also possible to define custom (numeric or nominal) attributes in the **&lt;attributes&gt;** section. The default type of every attribute is "NOMINAL", i.e. the values of an attribute are treated as distinct when compared while calculating a content-based model (ADVANCED solution). If you add another attribute in the attribute element named *type="NUMERIC"*, the recommender engine will treat the values as ranges. This means that a size of 4 is closer to a size of 5 than to 1. If the attribute price is of type NOMINAL, they are both just different and have no "distance-based similarity".
+It is also possible to define custom (numeric or nominal) attributes in the **&lt;attributes&gt;** section.
+The default type of every attribute is "NOMINAL", i.e. the values of an attribute are treated as distinct when compared while calculating a content-based model (ADVANCED solution).
+If you add another attribute in the attribute element named *type="NUMERIC"*, the recommender engine will treat the values as ranges.
+This means that a size of 4 is closer to a size of 5 than to 1.
+If the attribute price is of type NOMINAL, they are both just different and have no "distance-based similarity".
 
 ``` xml
 <attribute key="size" value="4" type="NUMERIC" />
@@ -114,15 +131,18 @@ Another typical example is the color of an item. To insert it in the store, the 
 
 #### Content
 
-You can load any content data in the content part of the item. The content is used only for full text analysis models, it cannot be used in `<content-data key="abstract"> <![CDATA[ ... ]]></content-data>`.
+You can load any content data in the content part of the item.
+The content is used only for full text analysis models, it cannot be used in `<content-data key="abstract"> <![CDATA[ ... ]]></content-data>`.
 
 ### Push Interface
 
-The Recommender provides a REST interface that accepts an item in XML-format. The following URL describes the interface.
+The Recommender provides a REST interface that accepts an item in XML-format.
+The following URL describes the interface.
 
 **`https://admin.yoochoose.net/api/[customerid]/item`**
 
-It can be used to POST item information within the request's body into the store and to show, update or delete items directly. The parameters that are used in the call are described in the table.
+It can be used to POST item information within the request's body into the store and to show, update or delete items directly.
+The parameters that are used in the call are described in the table.
 
 URL `https://admin.yoochoose.net/api/[customerid]/item/[itemtypeid]/[itemid]` is the direct link to fetch item data.
 
@@ -146,9 +166,13 @@ The body of a request to import data using the above interface must contain a va
 
 ### Transfer items
 
-The method transfers an item from one id to another id. The attributes of the old item are NOT moved or merged. If you rely on attributes for e.g. filtering based on prices, the new item must be reimported.
+The method transfers an item from one id to another ID.
+The attributes of the old item are NOT moved or merged.
+If you rely on attributes for e.g. filtering based on prices, the new item must be reimported.
 
-All related historical user data is rewritten to point to the new item. The old item is wiped, including all attributes. The authentication is based on BASIC AUTH with customerId and license-key.
+All related historical user data is rewritten to point to the new item.
+The old item is wiped, including all attributes.
+The authentication is based on BASIC AUTH with customerId and license-key.
 
 **`POST https://import.yoochoose.net/api/[customerid]/transferitems`**
 `Content-Type=text/xml`
