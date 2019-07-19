@@ -7,7 +7,7 @@ Collection of data from a database or IT System (e.g. a shop system or a CMS) th
 #### Catalog Data
 
 [Content](#content) that is used to build the Catalog used for the Service.
-The Catalog data can contain different content types.
+The Catalog data can contain different Content Types.
 
 ####Category path
 
