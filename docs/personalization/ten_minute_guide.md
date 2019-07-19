@@ -31,7 +31,7 @@ Integration is based on the following:
 ### Tracking Events
 
 Step one is called tracking. Every page must call special tracking URL.
-The simplest way is to place a tiny image on every product page, just it is usually done for analytic tools or visitor counter.
+The simplest way is to place a tiny image on every product page, just as it is usually done for analytic tools or visitor counter.
 It looks like this:
 
 **`<img href="https://event.yoochoose.net/ebl/00000/click/john.smith/1/123" width="1" height="1">`**

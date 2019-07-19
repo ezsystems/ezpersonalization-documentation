@@ -6,8 +6,8 @@ Collection of data from a database or IT System (e.g. a shop system or a CMS) th
 
 #### Catalog Data
 
-[Content](#content) that is used to build the catalog that is used for the Service.
-The catalog data can contain different content types
+[Content](#content) that is used to build the Catalog used for the Service.
+The Catalog data can contain different content types.
 
 ####Category path
 
@@ -29,7 +29,7 @@ You can e.g. have videos of content type 1 (YouTube videos) and of content type 
 
 Context is the current environment of the user.
 An example could be the logical position on a website, the (current) time or the location.
-It is used to enhance recommendations
+It is used to enhance recommendations.
 
 #### Explicit User Data
 
@@ -92,7 +92,7 @@ A scenario is a configuration for fetching recommendation. It includes filters, 
 #### Submodels
 
 Submodels are prefiltered recommendations and contain parts of the main model.
-For example, only content about certain cities is included and not all content
+For example, only content about certain cities is included and not all content.
 
 #### User Data
 
