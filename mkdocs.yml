@@ -29,10 +29,6 @@ pages:
             - 'Tracking integration': 'personalization/best_practices/tracking_integration.md'
             - 'Recommendation integration': 'personalization/best_practices/recommendation_integration.md'
         - 'Bundles': 'personalization/bundles.md'
-    - E-Commerce Plugins:
-        - 'Magento2': 'ecommerce_plugins/magento2.md'
-        - 'OXID': 'ecommerce_plugins/oxid.md'
-        - 'Renewing PayPal contract': 'ecommerce_plugins/paypal_contract_renewal.md'
     - 'Definitions': 'definitions.md'
 theme:
   name: null

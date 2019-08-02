@@ -4,7 +4,6 @@ eZ Personalization is a service for offering personalized recommendations to vis
 It can be used to serve targeted content to users based on their preferences and behavior.
 
 eZ Personalization can be used both by publishers (to serve personalized content and track its consumption), and in e-commerce (to recommend other products to purchase).
-It is compatible with several e-commerce platforms, see [E-Commerce Plugins](../ecommerce_plugins/magento2.md).
 
 ## Benefits
 
