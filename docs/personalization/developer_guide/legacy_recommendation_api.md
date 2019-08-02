@@ -6,19 +6,25 @@
 
     Please consider using the new [Recommendation API](recommendation_api.md) instead!
 
-This page describes how to fetch recommendations from the Recommender System via recommendation requests. Before recommendation can be fetched from the recommendation controller, a sufficient number of events must be collected and the model build must finish successfully.
+This page describes how to fetch recommendations from the Recommender System via recommendation requests.
+Before recommendation can be fetched from the recommendation controller, a sufficient number of events must be collected and the model build must finish successfully.
 
 !!! note
 
-    **BASIC Authentication** for fetching recommendations is enabled for some configurations (for example for Gambio Plugin) by default. Use the customerid as username and the license key as password. The license key is displayed in the upper right in the Admin GUI ([https://admin.yoochoose.net](https://admin.yoochoose.net/)) after logging with your registration credentials.
+    **BASIC Authentication** for fetching recommendations is enabled for some configurations (for example for Gambio Plugin) by default.
+    Use the customerid as username and the license key as password.
+    The license key is displayed in the upper right in the Admin GUI ([https://admin.yoochoose.net](https://admin.yoochoose.net/)) after logging with your registration credentials.
 
-    If you plan to use [JSONP](https://en.wikipedia.org/wiki/JSONP), authentication must be disabled. If it is enabled in your solution (can be easily tested with a recommendation request in a browser), please contact the eZ Recommender support (<support@yoochoose.com>) for further information and disabling.
+    If you plan to use [JSONP](https://en.wikipedia.org/wiki/JSONP), authentication must be disabled.
+    If it is enabled in your solution (can be easily tested with a recommendation request in a browser), please contact the eZ Recommender support (<support@yoochoose.com>) for further information and disabling.
 
 ## Getting recommendations
 
-Recommendations are retrieved from the recommendation engine via RESTful requests using the GET method. The result is a list of item IDs that can be used to call the underlying CMS or shop system in order to retrieve the necessary information for the rendering process.
+Recommendations are retrieved from the recommendation engine via RESTful requests using the GET method.
+The result is a list of item IDs that can be used to call the underlying CMS or shop system in order to retrieve the necessary information for the rendering process.
 
-To allow the customer to retrieve different types of recommendations based on different methods (e.g. Collaborative Filtering, Content Based, Stereotype, etc.) the Recommendation System uses scenario IDs relating to a predefined set of configurations inside the system. These configurations are a combination of methods and filters that should be applied including possible fallbacks if the requested methods do not deliver a result.
+To allow the customer to retrieve different types of recommendations based on different methods (e.g. Collaborative Filtering, Content Based, Stereotype, etc.) the Recommendation System uses scenario IDs relating to a predefined set of configurations inside the system.
+These configurations are a combination of methods and filters that should be applied including possible fallbacks if the requested methods do not deliver a result.
 
 A recommendation request looks like this:
 
@@ -58,7 +64,8 @@ It fetches 8 recommendations for user Smith, who is watching the item 123 and th
 
 ## Response handling
 
-The recommendation request returns a list of item IDs that are JSON, JSONP or XML-formatted. The result can be easily integrated into any webpage by using some lines of script code. 
+The recommendation request returns a list of item IDs that are JSON, JSONP or XML-formatted.
+The result can be easily integrated into any webpage by using some lines of script code. 
 
 !!! tip
 
@@ -110,9 +117,12 @@ Example XML response:
 </list>
 ```
 
-The "reason" field string tells the user out of which model the recommendations were provided. The models are preconfigured by the Recommendation Engine. For example "*CF\_I2I (context: ITEMS(s))*" means that the model which provides the recommendation is "Collaborative Filtering based on an Item to Item similarity" with the given context item as input. The human readable explanation is (in this case) "Users who bought this item also bought these items".
+The "reason" field string tells the user out of which model the recommendations were provided. The models are preconfigured by the Recommendation Engine.
+For example "*CF\_I2I (context: ITEMS(s))*" means that the model which provides the recommendation is "Collaborative Filtering based on an Item to Item similarity" with the given context item as input.
+The human readable explanation is (in this case) "Users who bought this item also bought these items".
 
-The "relevance" defines the similarity to the context item according to internal algorithm and scenario configuration. A higher value means a "better" recommendation. The list of recommendations is sorted by the relevance in descending order.
+The "relevance" defines the similarity to the context item according to internal algorithm and scenario configuration.
+A higher value means a "better" recommendation. The list of recommendations is sorted by the relevance in descending order.
 
 ### Response Codes
 
@@ -129,7 +139,8 @@ The Following HTTP response codes are used by the recommendation controller.
 |409 Conflict|The combination of used models and given recommendation request parameters doesn't allow to provide recommendations. This could be e.g. if personalized recommendations are requested for a user who has no history at all.|
 |500 Internal Server Error|Unspecified error. Please inform support if you get this error repeatedly.|
 
-The body of the response in case of errors contains human-readable error message. The format of error messages can be changed and should not be used for automated processing.
+The body of the response in case of errors contains human-readable error message.
+The format of error messages can be changed and should not be used for automated processing.
 
 ## Advanced Request Parameter
 
@@ -137,7 +148,9 @@ There are some additional very special request parameters.
 
 ###### any attribute name (used only if submodels are configured)
 
-Item's attribute, e.g. color, price, etc. These are customer specific and can only be understood by the recommender system if the item attributes are imported by using the YOOCHOOSE content import APIs. There can be multiple attributename and attributevalue pairs.
+Item's attribute, e.g. color, price, etc.
+These are customer specific and can only be understood by the recommender system if the item attributes are imported by using the YOOCHOOSE content import APIs.
+There can be multiple attributename and attributevalue pairs.
 
 Legacy Recommendation API and [Submodel configuration](../user_guide/recommendation_models.md#submodels) is required for taking an advantage from this parameter.
 
@@ -145,8 +158,10 @@ Legacy Recommendation API and [Submodel configuration](../user_guide/recommendat
 
 ###### `usecontextcategorypath`
 
-If set to true, the category path of the given contextitem(s) will be resolved by the recommender engine from the internal store and used as base category path. If more than one category is returned, all categories are used for providing recommendations.
-Avoid setting this parameter to true to minimize the response time. Use the parameter categorypath to provide the category to the recommender engine during the request.
+If set to true, the category path of the given contextitem(s) will be resolved by the recommender engine from the internal store and used as base category path.
+If more than one category is returned, all categories are used for providing recommendations.
+Avoid setting this parameter to true to minimize the response time.
+Use the parameter categorypath to provide the category to the recommender engine during the request.
 
 **Values**: true or false (default "false")
 
@@ -162,9 +177,12 @@ recommendationResponseList: [ {
 
 This feature helps to find "better" template for articles, which are located in several categories.
 
-For example there is an article about football in the USA. The article is located in both categories "/Sport/Football" and "/America/USA". Depending on the category it is shown with a football field or the USA flag in the background.
+For example there is an article about football in the USA.
+The article is located in both categories "/Sport/Football" and "/America/USA".
+Depending on the category it is shown with a football field or the USA flag in the background.
 
-If this article is recommended and is clicked in the category "/Sport/Cricket" it must open with the "football" template. If the article is clicked in the category "/America/Canada" it must open with the "USA" template.
+If this article is recommended and is clicked in the category "/Sport/Cricket" it must open with the "football" template.
+If the article is clicked in the category "/America/Canada" it must open with the "USA" template.
 
 The category information is returned only if the article is located in several categories and the "better" category found.
 
@@ -172,13 +190,15 @@ The category information is returned only if the article is located in several c
 
 ## Recommendation Caching
 
-In most cases the response of the recommendation service can be cached for some time. Depending on the used recommendation model and context it can dramatically reduce the number of recommendation requests and therefore the price for using the recommendation service. Recommendation service support following HTTP headers to allow cache control on the client side:
+In most cases the response of the recommendation service can be cached for some time.
+Depending on the used recommendation model and context it can dramatically reduce the number of recommendation requests and therefore the price for using the recommendation service.
+Recommendation service support following HTTP headers to allow cache control on the client side:
 
 |Scope|||Example|Format|
 |---|---|---|---|---|
 |Request|`If-Modified-Since`|Allows a *304 Not Modified* to be returned if content is unchanged.|`If-Modified-Since: Sat, 29 Oct 2013 19:43:31 GMT`|"HTTP-date" format as defined by [RFC 2616](https://tools.ietf.org/html/rfc2616)|
-|Response|`Last-Modified`|The last modification date of the recommendations.|`Last-Modified: Tue, 15 Nov 2013 12:45:26 GMT`|
-||`Expires`|Gives the date/time after which the response is considered to be outdated|`Expires: Thu, 01 Dec 2013 16:00:00 GMT`|
+|Response|`Last-Modified`|The last modification date of the recommendations.|`Last-Modified: Tue, 15 Nov 2013 12:45:26 GMT`|-|
+||`Expires`|Gives the date/time after which the response is considered to be outdated|`Expires: Thu, 01 Dec 2013 16:00:00 GMT`|-|
 
 The last modification timestamp indicates a change that could influence the recommendation response. It depends on an updated recommendation calculation, an update of an item or some scenario configuration changes. The expiration timestamp is a best-effort prediction based on the model building configuration and provided context. The shortest expiration period is 5 minutes from the request time. The longest is 24 hours. In the table below several examples are illustrated:
 
@@ -197,23 +217,32 @@ There are several ways to integrate the REST calls to the Recommendation engine 
 
 #### **Simple Way**
 
-The simplest way to load recommendations is to synchronously request the Recommendation Engine for recommendations as they are needed. This way is sufficient in most cases. The most important drawback is that the request time increases by the time of the recommendation request. If the network is overloaded or the Recommendation Engine is not available it can lock the request.
+The simplest way to load recommendations is to synchronously request the Recommendation Engine for recommendations as they are needed.
+This way is sufficient in most cases. The most important drawback is that the request time increases by the time of the recommendation request.
+If the network is overloaded or the Recommendation Engine is not available it can lock the request.
 
 #### Loading in the bottom
 
-You can place the code that loads the data from the eZ Recommender at the bottom of the generated document and flush the output buffer to the client just before requesting recommendations. The browser will get a whole page to render and can display it even if the very end of the page is still loading. Then the JavaScript code with the recommendation information loaded at the bottom of the page must fill the gaps on the page with recommendation as soon as it is completely loaded.
+You can place the code that loads the data from the eZ Recommender at the bottom of the generated document and flush the output buffer to the client just before requesting recommendations.
+The browser will get a whole page to render and can display it even if the very end of the page is still loading.
+Then the JavaScript code with the recommendation information loaded at the bottom of the page must fill the gaps on the page with recommendation as soon as it is completely loaded.
 
 #### Non-blocking loading in the background
 
-If the website is implemented in a language which supports multithreading or non-blocking I/O, it is possible to start the recommendation request just after the browser request is received. The page generation and the recommendation requests will be accomplished in parallel. By combining this idea with the previous solution and placing the recommendation results at the bottom of the page you can avoid any interruption in the processing.
+If the website is implemented in a language which supports multithreading or non-blocking I/O, it is possible to start the recommendation request just after the browser request is received.
+The page generation and the recommendation requests will be accomplished in parallel.
+By combining this idea with the previous solution and placing the recommendation results at the bottom of the page you can avoid any interruption in the processing.
 
 #### Loading from JavaScript using JSONP
 
-It is not possible to request the recommendation controller server directly from the JavaScript (over AJAX library or directly over XMLHttpRequest) because of the cross-domain restriction in most browsers. One of the possible technique to work around this limitation is [JSONP](https://en.wikipedia.org/wiki/JSONP).
+It is not possible to request the recommendation controller server directly from the JavaScript (over AJAX library or directly over XMLHttpRequest) because of the cross-domain restriction in most browsers.
+One of the possible technique to work around this limitation is [JSONP](https://en.wikipedia.org/wiki/JSONP).
 
 #### Loading over proxy
 
-A better solution in comparison with JSONP is to provide the proxy on the server side, which will forward script requests to the Recommender system. It can be implemented as a very simple proxy using the [mod\_proxy module](https://httpd.apache.org/docs/2.2/mod/mod_proxy.html) of Apache Webserver. It just transfers the data and the JavaScript renders the response into HTML itself.
+A better solution in comparison with JSONP is to provide the proxy on the server side, which will forward script requests to the Recommender system.
+It can be implemented as a very simple proxy using the [mod\_proxy module](https://httpd.apache.org/docs/2.2/mod/mod_proxy.html) of Apache Webserver.
+It just transfers the data and the JavaScript renders the response into HTML itself.
 
 An alternative approach is creating the HTML code on the server side for every target page in a sense to simplify the script on the client side.
 
@@ -225,9 +254,9 @@ An overview of pros and cons for each of the above techniques:
 
 |Problem|Simple Way|Bottom loading|Background loading|JSONP|XMLHttpRequest + Proxy|
 |---|---|---|---|---|---|
-|Is not blocked by ad blockers or no-track plug-ins|Yes|Yes|Yes||Yes|
-|Works if JavaScript is disabled|Yes|depends||||	 	 
-|Works for server without multithreading functionality|Yes|Yes||Yes|Yes|
-|Compatible with frontend caching on the server||||Yes|Yes|
-|Does not delay page rendering||depends|depends|Yes|Yes|
-|Supports authentication for recommendation fetching|Yes|Yes|Yes||depends|
+|Is not blocked by ad blockers or no-track plug-ins|Yes|Yes|Yes|-|Yes|
+|Works if JavaScript is disabled|Yes|depends|-|-|-|	 	 
+|Works for server without multithreading functionality|Yes|Yes|-|Yes|Yes|
+|Compatible with frontend caching on the server|-|-|-|Yes|Yes|
+|Does not delay page rendering|-|depends|depends|Yes|Yes|
+|Supports authentication for recommendation fetching|Yes|Yes|Yes|-|depends|

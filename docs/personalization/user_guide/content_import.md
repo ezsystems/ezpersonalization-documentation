@@ -1,6 +1,8 @@
 # 9. Content Import
 
-Basic recommendation algorithms are statistics-based and need only the product ID and user ID. This information is provided by the event tracking as described in chapter [4. Event Types](event_types.md). There are several use cases where the recommendation engine requires additional information linked to the products. The most important cases are:
+Basic recommendation algorithms are statistics-based and need only the product ID and user ID. This information is provided by the event tracking as described in chapter [4. Event Types](event_types.md).
+There are several use cases where the recommendation engine requires additional information linked to the products.
+The most important cases are:
 
 - Filtering results based on the category the product is located in ([Category Filter](filters.md#category-filter))
 - Filtering results based on price and product availability ([General Filters](filters.md#general-filters))
