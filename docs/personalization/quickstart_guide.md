@@ -1,6 +1,6 @@
-# Ten Minutes Guide
+# Quickstart guide
 
-This Ten Minutes Guide gives a basic overview of how the personalization engine works and how it is typically enabled.
+This quickstart guide gives a basic overview of how the personalization engine works and how it is typically enabled.
 Following is an example for the integration in an e-commerce shop.
 
 ## How it works

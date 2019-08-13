@@ -5,7 +5,7 @@ pages:
     - 'Documentation': 'index.md'
     - eZ Personalization Solution:
         - 'About Personalization': 'personalization/about_personalization.md'
-        - 'Ten minute guide': 'personalization/ten_minute_guide.md'
+        - 'Quickstart guide': 'personalization/quickstart_guide.md'
         - User guide:
             - '1. Introduction': 'personalization/user_guide/introduction.md'
             - '2. Use cases': 'personalization/user_guide/use_cases.md'

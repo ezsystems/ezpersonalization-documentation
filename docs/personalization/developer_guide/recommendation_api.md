@@ -234,4 +234,4 @@ In most cases you do not need to calculate the expiration time manually. The tab
 - [Uniform Resource Identifier (URI): Generic Syntax](https://tools.ietf.org/html/rfc3986)
 - [Apache Module mod\_proxy](https://httpd.apache.org/docs/2.2/mod/mod_proxy.html)
 - [Hypertext Transfer Protocol - HTTP/1.1](https://tools.ietf.org/html/rfc2616)
-- Integration in ten minutes: [Ten Minute Guide](../ten_minute_guide.md)
+- [Quickstart Guide](../quickstart_guide.md)

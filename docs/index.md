@@ -44,7 +44,7 @@
 <div class="card">
   <div class="card-header">Other topics</div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a href="personalization/ten_minute_guide/" class="card-link">Ten Minute Guide</a></li>
+    <li class="list-group-item"><a href="personalization/quickstart_guide/" class="card-link">Quickstart guide</a></li>
     <li class="list-group-item"><a href="personalization/best_practices/tracking_integration/" class="card-link"> Tracking Integration</a></li>
     <li class="list-group-item"><a href="https://doc.ezplatform.com/en/latest/guide/personalization/" class="card-link"> Recommendation in eZ Platform documentation</a></li>
   </ul>
