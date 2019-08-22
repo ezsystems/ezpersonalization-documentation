@@ -1,6 +1,8 @@
 # 9. Content Import
 
-Basic recommendation algorithms are statistics-based and need only the product ID and user ID. This information is provided by the event tracking as described in chapter [4. Event Types](event_types.md). There are several use cases where the recommendation engine requires additional information linked to the products. The most important cases are:
+Basic recommendation algorithms are statistics-based and need only the product ID and user ID. This information is provided by the event tracking as described in chapter [4. Event Types](event_types.md).
+There are several use cases where the recommendation engine requires additional information linked to the products.
+The most important cases are:
 
 - Filtering results based on the category the product is located in ([Category Filter](filters.md#category-filter))
 - Filtering results based on price and product availability ([General Filters](filters.md#general-filters))
@@ -12,7 +14,7 @@ There are four different ways to import data into the recommendation system:
 - **In-Event:** During the event tracking process, where related data is attached to a click event (e.g. categorypath information)
 - **Push interface:** Classic HTTP POST-based import. It is suitable for uploading single content or editor lists
 - **Pull interface:** The recommendation engine loads an exported file from the specified location in the background. It was designed to upload big portions of information, for example a weekly update of the whole product catalog
-- **Trigger logic:** The recommendation engine triggers a transactional full import at the customer's system. Therefore some custom development or a plugin is needed ([E-Commerce Plugins](../../ecommerce_plugins/magento2.md)). 
+- **Trigger logic:** The recommendation engine triggers a transactional full import at the customer's system. Therefore some custom development or a plugin is needed. 
 
 !!! tip
 

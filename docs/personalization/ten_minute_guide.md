@@ -1,12 +1,18 @@
 # Ten Minutes Guide
 
-This Ten Minutes Guide gives a basic overview of how the personalization engine works and how it is typically enabled. Following is an example for the integration in an e-commerce shop.
+This Ten Minutes Guide gives a basic overview of how the personalization engine works and how it is typically enabled.
+Following is an example for the integration in an e-commerce shop.
 
 ## How it works
 
 The idea of the recommendation engine is quite simple and built upon four main steps.
 
-A User visits an online shop, navigates through it and leaves some footprints. The most popular footprints are selecting and purchasing  products **(1)**. This information is sent to the event tracker service of the recommendation engine every time these events happen **(2)**. The recommendation engine accumulates the tracked events, categorizes them and calculates recommendations for every product and every user in the shop **(3)**. All recommendations are available over the recommender service. They can be fetched and presented to users during their sessions or sent out e.g. as a newsletter **(4)**.
+A User visits an online shop, navigates through it and leaves some footprints.
+The most popular footprints are selecting and purchasing  products **(1)**.
+This information is sent to the event tracker service of the recommendation engine every time these events happen **(2)**.
+The recommendation engine accumulates the tracked events, categorizes them and calculates recommendations for every product and every user in the shop **(3)**.
+All recommendations are available over the recommender service.
+They can be fetched and presented to users during their sessions or sent out e.g. as a newsletter **(4)**.
 
 ![Overview of how recommendation works](img/recommendation_overview.png)
 
@@ -19,11 +25,14 @@ Integration is based on the following:
 
 !!! note
 
-    Below we use the mandator ID '00000' for creating requests. You must substitute it with your own ID which is generated and sent to you by mail at the end of a successful registration process under [https://admin.yoochoose.net](https://admin.yoochoose.net/).
+    Below we use the mandator ID '00000' for creating requests.
+    You must substitute it with your own ID which is generated and sent to you by mail at the end of a successful registration process under [https://admin.yoochoose.net](https://admin.yoochoose.net/).
 
 ### Tracking Events
 
-Step one is called tracking. Every page must call special tracking URL. The simplest way is to place a tiny image on every product page, just it is usually done for analytic tools or visitor counter. It looks like this:
+Step one is called tracking. Every page must call special tracking URL.
+The simplest way is to place a tiny image on every product page, just as it is usually done for analytic tools or visitor counter.
+It looks like this:
 
 **`<img href="https://event.yoochoose.net/ebl/00000/click/john.smith/1/123" width="1" height="1">`**
 
@@ -65,7 +74,9 @@ foreach ($just_bought_products as $product_id) {
 
 ### Embedding Recommendations
 
-Depending on the page impressions/visits the recommendation engine has soon collected enough events and is able to generate recommendations. The more tracking data is available, the better and sharper the recommendations will be. Recommendations can be fetched using following calls, the response is returned as JSON.
+Depending on the page impressions/visits the recommendation engine has soon collected enough events and is able to generate recommendations.
+The more tracking data is available, the better and sharper the recommendations will be.
+Recommendations can be fetched using following calls, the response is returned as JSON.
 
 **`https://reco.yoochoose.net/api/v2/00000/john.smith/landing_page.json`**
 Returns the most popular products.
@@ -144,7 +155,8 @@ curl_close($curl);
 
 ## Next steps
 
-For the most simple but still very effective recommendations the steps described above are sufficient. Tracking more events, using additional parameters and custom scenario configurations enable features like:
+For the most simple but still very effective recommendations the steps described above are sufficient.
+Tracking more events, using additional parameters and custom scenario configurations enable features like:
 
 - Filtering recommendations based on category
 - Getting usage and revenue statistics

@@ -66,7 +66,7 @@ It fetches 8 recommendations for user john.doe, who is watching item 123 and the
 
 |Parameter Name|Description|Values|
 |---|---|---|
-|any attribute key (for example "color") |Used if a submodel with the same name and value is configured. See Submodel configuration for more information.</br>Example: `&color=red`||
+|any attribute key (for example "color") |Used if a submodel with the same name and value is configured. See Submodel configuration for more information.</br>Example: `&color=red`|-|
 |`userattribute`|If defined, the recommender tries to find the attribute value for the current user and - if available - prefers recommendations which are typically used by the current user's gender, e.g. attributename of a user like "userattribute=gender" or "userattribute=customerclass" or csv separated "userattribute=gender,customerclass"|default is null|
 
 ## Response handling
@@ -213,8 +213,8 @@ In most cases the response of the recommendation service can be cached for some 
 |Scope|||Example|Format|
 |---|---|---|---|---|
 |Request|`If-Modified-Since`|Allows a *304 Not Modified* to be returned if content is unchanged.|`If-Modified-Since: Sat, 29 Oct 2013 19:43:31 GMT`|"HTTP-date" format as defined by [RFC 2616](https://tools.ietf.org/html/rfc2616)|
-|Response|`Last-Modified`|The last modification date of the recommendations.|`Last-Modified: Tue, 15 Nov 2013 12:45:26 GMT`|
-||`Expires`|Gives the date/time after which the response is considered to be outdated|`Expires: Thu, 01 Dec 2013 16:00:00 GMT`|
+|Response|`Last-Modified`|The last modification date of the recommendations.|`Last-Modified: Tue, 15 Nov 2013 12:45:26 GMT`|-|
+||`Expires`|Gives the date/time after which the response is considered to be outdated|`Expires: Thu, 01 Dec 2013 16:00:00 GMT`|-|
 
 The last modification timestamp indicates a change, that could influence the recommendation response. It depends on an updated recommendation calculation, an update of an item or some scenario configuration changes. The expiration timestamp is a best-effort prediction based on the model building configuration and provided context. The shortest expiration period is 5 minutes from the request time. The longest is 24 hours. In the table below several examples are illustrated:
 

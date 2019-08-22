@@ -20,7 +20,7 @@ Below is a comparison for different ways of splitting content in the recommendat
 |Single recommendation request can contain products from different groups|no|yes|no|
 |Product can change the group it belongs to|no|yes|no|
 |Different content types share the scenario and model configuration|yes|yes|no|
-|Required Recommender Edition|single advanced||multiple basic|
+|Required Recommender Edition|single advanced|-|multiple basic|
 
 #### Scenario configuration
 

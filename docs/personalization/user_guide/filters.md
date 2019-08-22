@@ -15,23 +15,23 @@ The following example explains the different possibilities in more detail.
 
 Depicted below is the configuration dialog - available in the GUI on the right side of the model configuration tab in a scenario (see [Advanced Model Configuration](recommendation_models.md#advanced-model-configuration)) - and category structure which is basically the site navigation:
 
-![](../img/categorypath_filter.png)
+![Category path screenshot](../img/categorypath_filter.png)
 
-![](../img/categorypath_tree.png)
+![Category path tree](../img/categorypath_tree.png)
 
 The table below lists the possible configurations and categories that recommended items will be fetched from.
 
-In all examples we assume that the category received in the request is **"/furniture/desks&tables/tables"**.
+In all examples we assume that the category received in the request is **"/Furniture/Desks&Tables/Tables"**.
 
 |category Path Filter configuration|Target categories to fetch recommended products from|
 |---|---|
-|Always recommend products from the whole shop. Do not use category path for filtering.|All categories ("plants", "furniture" and below).|
-|Recommend only products from the same category ("also include..." is not checked).|Category "tables" and all the sub-categories below ("garden tables" and "living room tables").|
-|Recommend only products from the same category. "Also include parent category" is set to 1.|Category "desks&tables" and below including "computer desks", "tables" and all their sub-categories.|
-|Recommend only products from the same category. "Also include parent category" is set to 2.|Category "furniture" and below.|
-|Recommend products from the same main category and its subcategories from level 1.|Category "furniture" and below.|
-|Recommend products from the same main category and its subcategories from level 2.|Category "desks&tables" and below.|
-|Recommend products from the same main category and its subcategories from level 3.|Category "tables" and below.|
+|Always recommend products from the whole shop. Do not use category path for filtering.|All categories ("Plants", "Furniture" and below).|
+|Recommend only products from the same category ("also include..." is not checked).|Category "Tables" and all the sub-categories below ("Garden tables" and "Living room tables").|
+|Recommend only products from the same category. "Also include parent category" is set to 1.|Category "Desks/Tables" and below including "Desks", "Tables" and all their sub-categories.|
+|Recommend only products from the same category. "Also include parent category" is set to 2.|Category "Furniture" and below.|
+|Recommend products from the same main category and its subcategories from level 1.|Category "Furniture" and below.|
+|Recommend products from the same main category and its subcategories from level 2.|Category "Desks/Tables" and below.|
+|Recommend products from the same main category and its subcategories from level 3.|Category "Tables" and below.|
 
 It is possible to provide multiple reference categories (both in the request and over the context item or items). In this case the superset of the recommendations will be returned. The results are sorted based of global weight of the recommendations. Depending on the popularity of the categories the more popular category will most probably push the less popular categories out of the results.
 
@@ -69,7 +69,7 @@ To provide category filtering, the recommendation engine must know the categorie
 
 For every recommendation scenario a set of filters can be defined. They are applied to all recommendations from every model linked to this scenario. In the edit dialogue of a scenario you can find the user interface to manage filters.
 
-![General filter settings](../img/general_filters.png)
+![General filter settings](../img/scenario_configuration_full.png)
 
 |Filter|Requirements and restrictions|
 |---|---|
