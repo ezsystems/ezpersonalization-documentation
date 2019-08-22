@@ -1,4 +1,4 @@
-# eZ Services documentation
+# eZ Personalization documentation
 
 &nbsp;
 
