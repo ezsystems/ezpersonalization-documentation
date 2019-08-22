@@ -1,4 +1,5 @@
-# ezpersonalization-documentation
+# eZ Personalization documentation
+
 Source for the [eZ Personalization documentation for eZ Platform](https://doc.ezplatform.com/projects/ezpersonalization/en/latest/), an open source CMS based on the Symfony Full Stack Framework in PHP. 
 
 # Resources

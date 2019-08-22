@@ -2,8 +2,7 @@
 
 ## Introduction
 
-This documentation is intended for Users, Developers and System Administrators.
-You'll find information about installing, integrating, customizing and managing eZ Services. 
+This documentation is intended for Users, Developers and System Administrators. You'll find information about installing, integrating, customizing and managing eZ Personalization. 
 
 ### For Users
 
