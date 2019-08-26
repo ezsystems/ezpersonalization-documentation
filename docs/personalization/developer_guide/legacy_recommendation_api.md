@@ -69,7 +69,7 @@ The result can be easily integrated into any webpage by using some lines of scri
 
 !!! tip
 
-    See the [Ten Minute Guide](../ten_minute_guide.md) for a simple example written in PHP.
+    See the [Quickstart Guide](../quickstart_guide.md) for a simple example written in PHP.
 
 The recommendation result list looks like the following:
 

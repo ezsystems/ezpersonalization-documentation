@@ -2,14 +2,13 @@
 
 ## Introduction
 
-This documentation is intended for Users, Developers and System Administrators.
-You'll find information about installing, integrating, customizing and managing eZ Services. 
+This documentation is intended for Users, Developers and System Administrators. You'll find information about installing, integrating, customizing and managing eZ Personalization. 
 
 ### For Users
 
 **New to eZ Personalization Solution? See our [About Personalization](about_personalization.md) chapter.**
 
-**Want to know how Personalization works in short? Browse through our [Ten Minute Guide](ten_minute_guide.md).**
+**Want to know how Personalization works in short? Browse through our [Quickstart Guide](quickstart_guide.md).**
 
 **Taking a deep dive into the Recommender Configuration? Then our [User Guide](user_guide/introduction.md) suits you best.**
 

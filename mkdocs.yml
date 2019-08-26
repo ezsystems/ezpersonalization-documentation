@@ -1,11 +1,11 @@
-site_name: eZ Services Documentation
-repo_url: https://github.com/ezsystems/ezservices-documentation
+site_name: eZ Personalization Documentation
+repo_url: https://github.com/ezsystems/ezpersonalization-documentation
 copyright: "Copyright 1999-2019 eZ Systems AS and others"
 pages:
     - 'Documentation': 'index.md'
     - eZ Personalization Solution:
         - 'About Personalization': 'personalization/about_personalization.md'
-        - 'Ten minute guide': 'personalization/ten_minute_guide.md'
+        - 'Quickstart guide': 'personalization/quickstart_guide.md'
         - User guide:
             - '1. Introduction': 'personalization/user_guide/introduction.md'
             - '2. Use cases': 'personalization/user_guide/use_cases.md'
@@ -53,8 +53,8 @@ extra:
     - '/index.md'
 
   related_docs:
-    - title: 'eZ Services Documentation'
-      url: '/projects/ezservices'
+    - title: 'eZ Personalization Documentation'
+      url: '/projects/ezpersonalization'
     - title: 'eZ Platform Developer Documentation'
       url: '/'
     - title: 'eZ Platform User Documentation'

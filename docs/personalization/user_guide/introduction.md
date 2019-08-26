@@ -1,6 +1,6 @@
 # 1. Introduction
 
-Please read the [About Personalization](../about_personalization.md) and [Ten Minutes Guide](../ten_minute_guide.md) for a short introduction.
+Please read the [About Personalization](../about_personalization.md) and [Quickstart Guide](../quickstart_guide.md) for a short introduction.
 
 !!! note "E-Commerce vs. Publisher Wording"
 
