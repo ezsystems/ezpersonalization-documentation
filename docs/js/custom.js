@@ -86,7 +86,7 @@ $(document).ready(function () {
 
     docsearch({
         apiKey: '45b791682e3369e746be5c6c3b07ffb0',
-        indexName: 'ezplatform_ezpersonalization',
+        indexName: 'ezplatform_ezservices',
         inputSelector: '#search_input',
         algoliaOptions: {
             'facetFilters': ["lang:en", "version:" + branchName],
