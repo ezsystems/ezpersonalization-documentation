@@ -2,7 +2,7 @@ site_name: eZ Personalization Documentation
 repo_url: https://github.com/ezsystems/ezpersonalization-documentation
 copyright: "Copyright 1999-2020 eZ Systems AS and others"
 nav:
-    - 'Documentation': 'index.md'
+    - 'eZ Personalization Documentation': 'index.md'
     - eZ Personalization Solution:
         - 'About Personalization': 'personalization/about_personalization.md'
         - 'Quickstart guide': 'personalization/quickstart_guide.md'
@@ -46,6 +46,14 @@ theme:
   search_index_only: false
 
 # theme_dir: material
+
+plugins:
+    - search
+    - macros:
+        j2_block_start_string: '[[%'
+        j2_block_end_string: '%]]'
+        j2_variable_start_string: '[[='
+        j2_variable_end_string: '=]]'
 
 extra:
   version_warning: []
