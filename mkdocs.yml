@@ -67,7 +67,7 @@ extra:
     - title: 'eZ Platform User Documentation'
       url: '/projects/userguide'
     - title: 'eZ Commerce'
-      url: 'https://doc.ez.no/commerce'
+      url: '/projects/ezcommerce'
 
 extra_css:
   - fonts/MavenPro.css
